@@ -1,4 +1,6 @@
 class Api::ImagesController < ApplicationController
+  before_action :set_image, only: [:show, :update, :destroy]
+
   def index
     render json: Image.all
   end
@@ -35,7 +37,7 @@ class Api::ImagesController < ApplicationController
     end
 
     def _params
-      params.require(:image).permit(:name, :description, :price, :department)
+      params.require(:image).permit(:image_url)
     end
 
 end
