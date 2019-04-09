@@ -14,16 +14,6 @@ class Topics extends React.Component {
         this.setState({ topics: res.data, });
       })
   }
-
-  updateTopic = () => {
-    const topic = { ...this.state}
-    axios.post(`/api/topics/${topic.id}` )
-    .then( res => {
-      
-      this.props.history.push("/topicsview");
-    }
-    )
-}
   renderTopics = () => {
     const { topics, } = this.state;
 
@@ -40,7 +30,7 @@ class Topics extends React.Component {
         return (
           <div>
             
-            <Header as='h1' textAlign='center'>{ this.renderTopics() }</Header>
+            <Header as='h1' textAlign='center'>{ this.renderTopics }</Header>
           
             
           </div>
