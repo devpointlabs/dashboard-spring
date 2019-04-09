@@ -10,6 +10,8 @@ import EventsForm from './components/EventsForm';
 import Events from './components/Events';
 import FetchUser from './components/FetchUser'
 import ProtectedRoute from './components/ProtectedRoute';
+import Video from './components/Video'
+import VideoForm from "./components/VideoForm"
 
 const App = () => (
   <div>
@@ -22,6 +24,8 @@ const App = () => (
         <Route exact path="/register" component={Register} />
         <Route exact path="/events/new" component={EventsForm} />
         <Route exact path="/events" component={Events} />
+        <Route exact path="/videoform" component={VideoForm} />
+        <Route exact path="/video" component={Video} />
         <Route component={NoMatch} />
       </Switch>
     </Container>

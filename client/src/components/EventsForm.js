@@ -17,8 +17,8 @@ class EventsForm extends React.Component {
   }
 
   handleChange = (e) => {
-    const{ target: { title, value, } } = e;
-    this.setState({ [title]: value, });
+    const{ name, value, } = e.target
+    this.setState({ [name]: value, });
   }
 
   render () {

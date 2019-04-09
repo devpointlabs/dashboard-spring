@@ -19,7 +19,7 @@ class Events extends React.Component {
 
     if (events.length <= 0)
       return <h2>No Events</h2>
-    return Events.map( event => (
+    return events.map( event => (
       <Card>
         <Card.Content>
           <Card.Header>{ event.title }</Card.Header>
