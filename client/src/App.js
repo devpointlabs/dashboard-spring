@@ -10,8 +10,12 @@ import EventsForm from './components/EventsForm';
 import Events from './components/Events';
 import FetchUser from './components/FetchUser'
 import ProtectedRoute from './components/ProtectedRoute';
+import TopicsForm from './components/TopicsForm'
+import TopicView from './components/TopicView'
+
 import Video from './components/Video'
 import VideoForm from "./components/VideoForm"
+
 
 const App = () => (
   <div>
@@ -22,6 +26,8 @@ const App = () => (
         <ProtectedRoute exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
+        <Route exact path="/topicsform" component={TopicsForm} />
+        <Route exact path="/topicsview" component={TopicView} />
         <Route exact path="/events/new" component={EventsForm} />
         <Route exact path="/events" component={Events} />
         <Route exact path="/videoform" component={VideoForm} />
