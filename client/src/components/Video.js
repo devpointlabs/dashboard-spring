@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-
+import { AuthConsumer, } from "../providers/AuthProvider";
 class Video extends React.Component {
   state = { video: [] }
   
@@ -42,6 +42,13 @@ class Video extends React.Component {
 }
 
 
+const ConnectedVideo = (props) => (
+  <AuthConsumer>
+      {auth =>
+          <Video {...props} auth={auth} />
+      }
+  </AuthConsumer>
+)
 
 
-export default Video;
+export default ConnectedVideo

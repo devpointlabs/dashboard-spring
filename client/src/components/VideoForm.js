@@ -57,6 +57,12 @@ class VideoForm extends React.Component {
     }
 }
 
+const ConnectedVideoForm = (props) => (
+    <AuthConsumer>
+        {auth =>
+            <VideoForm {...props} auth={auth} />
+        }
+    </AuthConsumer>
+)
 
-
-export default VideoForm
+export default ConnectedVideoForm
