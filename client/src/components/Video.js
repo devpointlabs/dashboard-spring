@@ -3,12 +3,12 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 
 class Video extends React.Component {
-  state = { videos: [] }
+  state = { video: [] }
   
   componentDidMount() {
     axios.get(`/api/videos`)
       .then(res =>
-        this.setState({ videos: res.data }))
+        this.setState({ video: res.data }))
   }
 
   render() {
@@ -16,13 +16,15 @@ class Video extends React.Component {
         <>
 
         <div style={{display: "flex", flexWrap: "wrap"}}>
-          {this.state.videos.map(v=> 
-            <div key={this.state.videos.id} style={{margin: "20px", zIndex: "2", border: "solid black 1px", textAlign: "Center"}}> 
+          {this.state.video.map(v=> 
+            <div key={this.state.video.id} style={{margin: "20px", zIndex: "2", border: "solid black 1px", textAlign: "Center"}}> 
               <Link to={`/video/${v.id}`}>    
-                <div style={{}}>
-                  <iframe src={v.video_url} controls={0} style={{zIndex: "1"}} >
-                  </iframe>
-                </div>
+              <div>
+                <iframe width="300%" height="500px" src={v.video_url}
+                  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+                </iframe>
+              </div>
                 <div style={{display: "flex", width: "100%"}}>
                 <div style={{fontSize: "2em", fontWeight: "bold", padding: "10px", color: "black"}}>
                 {v.title} 
