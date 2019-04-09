@@ -1,11 +1,11 @@
 import React from 'react';
 import { Header, } from 'semantic-ui-react';
-import { Events, } from 'events';
+import  Events  from './Events';
 import axios from 'axios';
 
 
 const Home = () => (
-  <div>Enter Header
+  <div>
 <Header as="h3" textAlign="center">Dashboard</Header>
 </div>
 )

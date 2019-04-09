@@ -38,14 +38,14 @@ class EventsForm extends React.Component {
               required
           />
           <Form.Input
-            label="startTime"
+            label="Start Time"
             name="startTime"
             placeholder="startTime"
             value={startTime}
             onChange={this.handleChange}
           />
           <Form.Input
-            label="endTime"
+            label="End Time"
             name="endTime"
             placeholder="endTime"
             value={endTime}
