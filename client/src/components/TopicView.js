@@ -1,6 +1,9 @@
 import React from 'react';
-import { Header, Form, Dropdown, Container, Card } from 'semantic-ui-react';
+import { Header, Form, Dropdown, Button, Container, Card, Image } from 'semantic-ui-react';
 import axios from 'axios'
+import beaker from '../Images/Beaker.png'
+import {Link, } from 'react-router-dom'
+
 
 
 class TopicView extends React.Component {
@@ -42,6 +45,8 @@ class TopicView extends React.Component {
         <Header as='h1' textAlign='center'>Today's Lecture Topic:</Header>
         <Header as='h4' textAlign='center'>University of Utah Full-Time Web Development</Header>
         <Header as='h1' textAlign='center'>{ this.renderTopics() }</Header>
+        <Image src={beaker} centered size="tiny"></Image>
+
 
       </div>
     )

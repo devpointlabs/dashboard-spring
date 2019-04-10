@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Grid, Image} from 'semantic-ui-react';
+import { Header, Grid, Image, Card,} from 'semantic-ui-react';
 import TopicView from './TopicView'
 import  Events  from './Events';
 import axios from 'axios';
@@ -9,8 +9,8 @@ import Video from './Video'
 const Home = () => (
   <div>
     
-    <Grid overflow='visible' divided='vertically' celled padded style={{height: '100vh'}}>
-      <Grid.Row columns={2} style={{height: '50%'}}>
+    <Grid divided='vertically' celled padded style={{height: '100vh'}}>
+      <Grid.Row overflow='visible' columns={2} style={{height: '50%'}}>
         <Grid.Column>
             <TopicView /> 
         </Grid.Column>
@@ -30,7 +30,7 @@ const Home = () => (
         </Grid.Row>
     </Grid>
     
-    <Header as="h3" textAlign="center">Dashboard</Header>
+    
   <Header as="h3" textAlign="center">
     Home
     <Link to="/video"> Video</Link>

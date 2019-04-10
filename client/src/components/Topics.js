@@ -1,6 +1,7 @@
 import React from 'react';
-import { Header, Dropdown, Container, Card } from 'semantic-ui-react';
+import { Header, Dropdown, Container, Card, Button, } from 'semantic-ui-react';
 import axios from 'axios'
+import {Link, } from 'react-router-dom'
 
 
 class Topics extends React.Component {
@@ -23,14 +24,15 @@ class Topics extends React.Component {
       
         
         <Header >{ topic.title }</Header>
-        ))
-      }
+      ))
+  }
       
       render() {
         return (
           <div>
             
             <Header as='h1' textAlign='center'>{ this.renderTopics }</Header>
+            <Button as={Link} to='/topicsform'>Edit</Button>
           
             
           </div>

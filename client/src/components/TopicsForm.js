@@ -1,7 +1,8 @@
 import React from 'react';
-import { Form, Header, Card } from "semantic-ui-react";
+import { Form, Header, Card, Button,  } from "semantic-ui-react";
 import axios from "axios"
 import Topics from './Topics';
+import {Link, } from 'react-router-dom'
 
 
 class TopicsForm extends React.Component {
@@ -60,9 +61,6 @@ class TopicsForm extends React.Component {
           <Form.Button color="purple">Submit</Form.Button>
         </Form>
         <br/>
-      
-        
-        <Topics/>
         
 
       </div>
