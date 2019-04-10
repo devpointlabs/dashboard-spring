@@ -37,7 +37,7 @@ class TopicView extends React.Component {
   render() {
     const { title, topic_date, topic_image, id } = this.state;
     return (
-      <div>
+      <div overflow='visible'>
         <Header as='h1' textAlign='center'>Today's Lecture Topic:</Header>
         <Header as='h4' textAlign='center'>University of Utah Full-Time Web Development</Header>
         <Header as='h1' textAlign='center'>{ this.renderTopics() }</Header>

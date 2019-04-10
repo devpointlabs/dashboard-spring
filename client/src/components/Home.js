@@ -48,7 +48,5 @@ const Home = () => (
     form
     <Link to="/imageform"> ImageForm</Link>
   </Header>
-  </div>
-)
-
+ </div>
 export default Home;
