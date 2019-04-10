@@ -14,7 +14,7 @@ import TopicsForm from './components/TopicsForm'
 import TopicView from './components/TopicView'
 import Video from './components/Video'
 import VideoForm from "./components/VideoForm"
-import Image from './components/Images'
+import Images from './components/Images'
 import ImageForm from './components/ImageForm'
 
 
@@ -34,7 +34,7 @@ const App = () => (
         <Route exact path="/videoform" component={VideoForm} />
         <Route exact path="/video" component={Video} />
         <Route exact path="/imageform" component={ImageForm} />
-        <Route exact path="/image" component={Image} />
+        <Route exact path="/images" component={Images} />
         <Route component={NoMatch} />
       </Switch>
     </Container>

@@ -42,7 +42,7 @@ const Home = () => (
   </Header>
   <Header as="h3" textAlign="center">
     form
-    <Link to="/images"> Image</Link>
+    <Link to="/images"> Images</Link>
   </Header>
   <Header as="h3" textAlign="center">
     form
