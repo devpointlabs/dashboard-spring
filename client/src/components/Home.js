@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header, Grid} from 'semantic-ui-react';
 import TopicView from './TopicView';
-import Image from './Image';
+import Images from './Images';
 import  Events  from './Events';
 import axios from 'axios';
 import { Link, } from 'react-router-dom';
@@ -16,7 +16,7 @@ const Home = () => (
             <TopicView /> 
         </Grid.Column>
         <Grid.Column>
-            <Image />
+            <Images />
         </Grid.Column>
       </Grid.Row>
 
@@ -42,7 +42,7 @@ const Home = () => (
   </Header>
   <Header as="h3" textAlign="center">
     form
-    <Link to="/image"> Image</Link>
+    <Link to="/images"> Image</Link>
   </Header>
   <Header as="h3" textAlign="center">
     form
@@ -50,11 +50,5 @@ const Home = () => (
   </Header>
   </div>
 )
-
-  
-
-
-
-
 
 export default Home;

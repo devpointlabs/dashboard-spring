@@ -14,7 +14,7 @@ import TopicsForm from './components/TopicsForm'
 import TopicView from './components/TopicView'
 import Video from './components/Video'
 import VideoForm from "./components/VideoForm"
-import Image from './components/Image'
+import Image from './components/Images'
 import ImageForm from './components/ImageForm'
 
 

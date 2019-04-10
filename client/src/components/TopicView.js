@@ -4,8 +4,7 @@ import axios from 'axios'
 
 
 class TopicView extends React.Component {
-
-
+  
   state = { topics: [], };
 
   componentDidMount() {

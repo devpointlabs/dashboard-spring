@@ -4,11 +4,11 @@ import { AuthConsumer, } from "../providers/AuthProvider";
 import { Button, Form, Header, } from 'semantic-ui-react';
 
 class ImageForm extends React.Component {
-    state = { image_url: "",}
+  state = { image_url: "",}
 
-    handleChange = (e, { name, value, }) => this.setState({ [name]: value,});
+  handleChange = (e, { name, value, }) => this.setState({ [name]: value,});
 
-    handleSubmit = (e) => {
+  handleSubmit = (e) => {
         e.preventDefault()
         const u_id = this.props.auth.user.id
         const {match: { params: { id } }, history: { push } } = this.props
@@ -17,7 +17,7 @@ class ImageForm extends React.Component {
             .then( res => push("/"))
     }
 
-    render() {
+  render() {
         const { image_url, } = this.state
         return(
             <>
