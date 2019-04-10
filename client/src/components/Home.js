@@ -1,37 +1,37 @@
 import React from 'react';
-import { Header, Grid, Image} from 'semantic-ui-react';
-import TopicView from './TopicView'
+import { Header, Grid} from 'semantic-ui-react';
+import TopicView from './TopicView';
+import Image from './Image';
 import  Events  from './Events';
 import axios from 'axios';
 import { Link, } from 'react-router-dom';
+import Video from './Video'
 
 const Home = () => (
   <div>
     
-    <Grid divided='vertically' celled padded style={{height: '100vh'}}>
+    <Grid overflow='visible' divided='vertically' celled padded style={{height: '100vh'}}>
       <Grid.Row columns={2} style={{height: '50%'}}>
         <Grid.Column>
             <TopicView /> 
         </Grid.Column>
         <Grid.Column>
-          <Header as='h3' textAlign='center'>Picture</Header>
+            <Image />
         </Grid.Column>
       </Grid.Row>
 
       <Grid.Row columns={2} style={{height: '50%'}}>
           <Grid.Column>
-            <Header as='h3' textAlign='center'>Video</Header>
+            <Video />
           </Grid.Column>
           <Grid.Column>
-            <Header as='h3' textAlign='center'>Events</Header>
+            <Events />
           </Grid.Column>
           
         </Grid.Row>
     </Grid>
-  </div>
-    <div>
+    
     <Header as="h3" textAlign="center">Dashboard</Header>
-  </div>
   <Header as="h3" textAlign="center">
     Home
     <Link to="/video"> Video</Link>
@@ -40,6 +40,15 @@ const Home = () => (
     form
     <Link to="/videoform"> VideoForm</Link>
   </Header>
+  <Header as="h3" textAlign="center">
+    form
+    <Link to="/image"> Image</Link>
+  </Header>
+  <Header as="h3" textAlign="center">
+    form
+    <Link to="/imageform"> ImageForm</Link>
+  </Header>
+  </div>
 )
 
   
@@ -47,5 +56,5 @@ const Home = () => (
 
 
 
-)
+
 export default Home;
