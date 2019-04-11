@@ -13,8 +13,7 @@ class Video extends React.Component {
 
   render() {
     return (
-        <>
-
+      <>
         <div style={{display: "flex", flexWrap: "wrap"}}>
           {this.state.video.map(v=> 
             <div key={this.state.video.id} style={{margin: "20px", zIndex: "2", textAlign: "Center"}}> 
@@ -32,14 +31,11 @@ class Video extends React.Component {
               </Link>
               </div>)}
         </div>
-    
       </>
     )
   }
 
 }
-
-
 const ConnectedVideo = (props) => (
   <AuthConsumer>
       {auth =>
