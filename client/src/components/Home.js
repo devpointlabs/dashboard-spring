@@ -4,7 +4,7 @@ import TopicsList from './TopicView'
 import  Events  from './Events';
 import axios from 'axios';
 import { Link, } from 'react-router-dom';
-import Video from './Video'
+import VideoView from './VideoView'
 
 const Home = () => (
   <div>
@@ -21,7 +21,7 @@ const Home = () => (
 
       <Grid.Row columns={2} style={{height: '50%'}}>
           <Grid.Column>
-            <Video />
+            <VideoView />
           </Grid.Column>
           <Grid.Column>
             <Events />

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Form, Header, Card } from "semantic-ui-react";
+import { Form, Header, } from "semantic-ui-react";
 import axios from "axios"
-import Topics from './Topics';
+
 
 
 class TopicsForm extends React.Component {
@@ -10,6 +10,7 @@ class TopicsForm extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+    debugger
     const topic = { ...this.state, };
     axios.post("/api/topics", topic)
       .then( res => {

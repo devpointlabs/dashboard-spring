@@ -11,13 +11,12 @@ import Events from './components/Events';
 import FetchUser from './components/FetchUser'
 import ProtectedRoute from './components/ProtectedRoute';
 import TopicsForm from './components/TopicsForm'
-import TopicsList from './components/TopicView'
-import Topics from './components/Topics'
 import Topic from './components/Topic'
 import TopicView from './components/TopicView'
 import TopicEdit from './components/TopicEdit'
-import Video from './components/Video'
+import VideoView from './components/VideoView'
 import VideoForm from "./components/VideoForm"
+import VideoEdit from './components/VideoEdit'
 
 
 
@@ -31,14 +30,15 @@ const App = () => (
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
         <Route exact path="/topicsform" component={TopicsForm} />
-        <Route exact path="/topics" component={TopicsList} />
         <Route exact path="/topicsview" component={TopicView} />
         <Route exact path="/topics/edit" component={TopicEdit} />
         <Route exact path="/events/new" component={EventsForm} />
         <Route exact path="/topics/:id" component={Topic} />
         <Route exact path="/events" component={Events} />
         <Route exact path="/videoform" component={VideoForm} />
-        <Route exact path="/video" component={Video} />
+        <Route exact path="/videoview" component={VideoView} />
+        <Route exact path="/videoedit" component={VideoEdit} />
+        
         <Route component={NoMatch} />
       </Switch>
     </Container>
