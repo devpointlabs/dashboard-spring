@@ -1,6 +1,7 @@
 import React from 'react';
 import { Header, Form, Dropdown, Container, Card } from 'semantic-ui-react';
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 
 class TopicView extends React.Component {
@@ -15,25 +16,31 @@ class TopicView extends React.Component {
       })
   }
 
-  updateView = (id) => {
-    let { topics, } = this.state;
-    axios.put(`/api/topics/${id}`)
-    .then( res => {
-      this.props.history.push("/topicsview");
-    })
-  }
-
   renderTopics = () => {
-    const { topics, } = this.state;
+    const { topics } = this.state
 
-    if (topics.length <= 0)
-      return <h1>No Topic</h1>
-    return topics.map( topic => (
-      
-        
-        <Header >{ topic.title }</Header>
-      ))
+    switch (topics.length) {
+      case 1 :
+      return topics.map( topic => (
+       <Header >{ topic.title }</Header>
+      )
+    )
+      case 0 : 
+      return (
+        <>
+          <h1>You don't have any Topics </h1>
+          <Link to="/topicsform">Add A Topic</Link>
+        </>
+      )
+      default :
+      return (
+        <>
+          <h1>You Have Too Many Topics </h1>
+          <Link to="/topics/edit">Mange Topics</Link>
+        </>
+      )
   }
+}
     
   render() {
     const { title, topic_date, topic_image, id } = this.state;
@@ -47,14 +54,6 @@ class TopicView extends React.Component {
     )
   }
 }
-    
-    
+       
 export default TopicView;
-      
-        
     
-      
-          
-         
-      
-

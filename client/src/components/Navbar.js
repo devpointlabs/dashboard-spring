@@ -57,6 +57,12 @@ class Navbar extends React.Component {
               active={this.props.location.pathname === '/topicsform'}
             />
           </Link>
+          <Link to='/topics/edit'>
+            <Menu.Item
+              name='Topic Edit'
+              id='topic edit'
+            />
+          </Link>
             { this.rightNavItems() }
         </Menu>
       </div>
