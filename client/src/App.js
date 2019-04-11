@@ -14,8 +14,10 @@ import TopicsForm from './components/TopicsForm'
 import TopicView from './components/TopicView'
 import Video from './components/Video'
 import VideoForm from "./components/VideoForm"
+import VideoView from "./components/VideoView"
 import Images from './components/Images'
-import ImageForm from './components/ImageForm'
+import ImagesForm from './components/ImagesForm'
+import ImagesView from "./components?ImagesView"
 
 
 const App = () => (
@@ -33,8 +35,10 @@ const App = () => (
         <Route exact path="/events" component={Events} />
         <Route exact path="/videoform" component={VideoForm} />
         <Route exact path="/video" component={Video} />
-        <Route exact path="/imageform" component={ImageForm} />
+        <Route exact path="/videoview" component={VideoView} />
+        <Route exact path="/imagesform" component={ImagesForm} />
         <Route exact path="/images" component={Images} />
+        <Route exact path="imagesview" component={ImagesView} />
         <Route component={NoMatch} />
       </Switch>
     </Container>
