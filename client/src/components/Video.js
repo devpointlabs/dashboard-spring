@@ -19,15 +19,11 @@ class Video extends React.Component {
             <div key={this.state.video.id} style={{margin: "20px", zIndex: "2", textAlign: "Center"}}> 
               <Link to={`/video/${v.id}`}>    
               <div>
-                <iframe width="160%" height="300px" src={v.video_url}
+                <iframe width="100%" height="100px" src={v.video_url}
                   frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
                   allowfullscreen>
                 </iframe>
               </div>
-                <div style={{display: "flex", width: "100%"}}>
-              
-                <div style={{fontSize: "1em", color: "black", }}></div>
-                </div>
               </Link>
               </div>)}
         </div>

@@ -40,15 +40,13 @@ const Home = () => (
     form
     <Link to="/videoform"> VideoForm</Link>
   </Header>
-  <Header as="h3" textAlign="center">
-    form
-    <Link to="/images"> Images</Link>
-  </Header>
-  <Header as="h3" textAlign="center">
-    form
-    <Link to="/imageform"> ImageForm</Link>
-  </Header>
   </div>
 )
+
+  
+
+
+
+
 
 export default Home;

@@ -33,11 +33,11 @@ class Images extends React.Component {
   }
 
 }
-const ConnectedImage = (props) => (
+const ConnectedImages = (props) => (
   <AuthConsumer>
       {auth =>
           <Images {...props} auth={auth} />
       }
   </AuthConsumer>
 )
-export default ConnectedImage
+export default ConnectedImages
