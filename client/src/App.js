@@ -12,6 +12,7 @@ import FetchUser from './components/FetchUser'
 import ProtectedRoute from './components/ProtectedRoute';
 import TopicsForm from './components/TopicsForm'
 import TopicView from './components/TopicView'
+import TopicEdit from './components/TopicEdit'
 
 import Video from './components/Video'
 import VideoForm from "./components/VideoForm"
@@ -28,6 +29,7 @@ const App = () => (
         <Route exact path="/register" component={Register} />
         <Route exact path="/topicsform" component={TopicsForm} />
         <Route exact path="/topicsview" component={TopicView} />
+        <Route exact path="/topics/edit" component={TopicEdit} />
         <Route exact path="/events/new" component={EventsForm} />
         <Route exact path="/events" component={Events} />
         <Route exact path="/videoform" component={VideoForm} />
