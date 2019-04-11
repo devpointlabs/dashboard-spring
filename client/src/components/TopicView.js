@@ -1,13 +1,14 @@
 import React from 'react';
 import { Header, Form, Dropdown, Button, Container, Card, Image } from 'semantic-ui-react';
 import axios from 'axios'
+
 import beaker from '../Images/Beaker.png'
 import {Link, } from 'react-router-dom'
 import Topic from './Topic'
 
 
 
-class TopicsList extends React.Component {
+class TopicView extends React.Component {
 
 
   state = { topics: [], };
@@ -19,25 +20,31 @@ class TopicsList extends React.Component {
       })
   }
 
-  updateView = (id) => {
-    let { topics, } = this.state;
-    axios.put(`/api/topics/${id}`)
-    .then( res => {
-      this.props.history.push("/topics");
-    })
-  }
-
   renderTopics = () => {
-    const { topics, } = this.state;
-    
-    if (topics.length <= 0)
-      return <h1>No Topic</h1>
-    return topics.map( topic => (
-      <Link to={`/topics/${topic.id}`}>
-        <h1>{topic.title}</h1>
-      </Link>
-    ))
+    const { topics } = this.state
+
+    switch (topics.length) {
+      case 1 :
+      return topics.map( topic => (
+       <Header >{ topic.title }</Header>
+      )
+    )
+      case 0 : 
+      return (
+        <>
+          <h1>You don't have any Topics </h1>
+          <Link to="/topicsform">Add A Topic</Link>
+        </>
+      )
+      default :
+      return (
+        <>
+          <h1>You Have Too Many Topics </h1>
+          <Link to="/topics/edit">Mange Topics</Link>
+        </>
+      )
   }
+}
     
   render() {
     return (
@@ -52,9 +59,9 @@ class TopicsList extends React.Component {
     )
   }
 }
+
     
-    
-export default TopicsList;
+export default TopicView;
       
         
     
@@ -62,4 +69,3 @@ export default TopicsList;
           
          
       
-

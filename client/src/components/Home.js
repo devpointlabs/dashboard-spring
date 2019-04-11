@@ -1,6 +1,6 @@
 import React from 'react';
 import { Header, Grid, Image, Card,} from 'semantic-ui-react';
-import TopicsList from './TopicsList'
+import TopicsList from './TopicView'
 import  Events  from './Events';
 import axios from 'axios';
 import { Link, } from 'react-router-dom';
