@@ -3,10 +3,11 @@ import { Header, Form, Dropdown, Button, Container, Card, Image } from 'semantic
 import axios from 'axios'
 import beaker from '../Images/Beaker.png'
 import {Link, } from 'react-router-dom'
+import Topic from './Topic'
 
 
 
-class TopicView extends React.Component {
+class TopicsList extends React.Component {
 
 
   state = { topics: [], };
@@ -22,24 +23,23 @@ class TopicView extends React.Component {
     let { topics, } = this.state;
     axios.put(`/api/topics/${id}`)
     .then( res => {
-      this.props.history.push("/topicsview");
+      this.props.history.push("/topics");
     })
   }
 
   renderTopics = () => {
     const { topics, } = this.state;
-
+    
     if (topics.length <= 0)
       return <h1>No Topic</h1>
     return topics.map( topic => (
-      
-        
-        <Header >{ topic.title }</Header>
-      ))
+      <Link to={`/topics/${topic.id}`}>
+        <h1>{topic.title}</h1>
+      </Link>
+    ))
   }
     
   render() {
-    const { title, topic_date, topic_image, id } = this.state;
     return (
       <div overflow='visible'>
         <Header as='h1' textAlign='center'>Today's Lecture Topic:</Header>
@@ -54,7 +54,7 @@ class TopicView extends React.Component {
 }
     
     
-export default TopicView;
+export default TopicsList;
       
         
     

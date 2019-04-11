@@ -1,6 +1,6 @@
 import React from 'react';
 import { Header, Grid, Image, Card,} from 'semantic-ui-react';
-import TopicView from './TopicView'
+import TopicsList from './TopicsList'
 import  Events  from './Events';
 import axios from 'axios';
 import { Link, } from 'react-router-dom';
@@ -12,7 +12,7 @@ const Home = () => (
     <Grid divided='vertically' celled padded style={{height: '100vh'}}>
       <Grid.Row overflow='visible' columns={2} style={{height: '50%'}}>
         <Grid.Column>
-            <TopicView /> 
+            <TopicsList/> 
         </Grid.Column>
         <Grid.Column>
           <Header as='h3' textAlign='center'>Picture</Header>

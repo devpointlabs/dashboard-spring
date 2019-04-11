@@ -1,26 +1,32 @@
-import React from 'react';
-import { Form, Header, Card } from "semantic-ui-react";
-import axios from "axios"
-import Topics from './Topics';
+import React from 'react'
+import axios from 'axios';
+import {Form, Header,  } from 'semantic-ui-react'
 
-
-class TopicsForm extends React.Component {
+class Topic extends React.Component {
   // defaultValues = { title: "", topic_date: "", topic_image: "",  };
   state = { topics: [], };
 
-  handleSubmit = (e) => {
-    e.preventDefault();
-    const topic = { ...this.state, };
-    axios.post("/api/topics", topic)
-      .then( res => {
-        this.props.history.push("/topicsview");
-      })
-      // this.setState({ ...this.defaultValues, });
-  }
+  // handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   const topic = { ...this.state, };
+  //   axios.post("/api/topics", topic)
+  //     .then( res => {
+  //       this.props.history.push("/topicsview");
+  //     })
+  //     // this.setState({ ...this.defaultValues, });
+  // }
 
   handleChange = (e) => {
     const { name, value, } = e.target;
     this.setState({ [name]: value, });
+  }
+
+  updateView = () => {
+    let { topics, } = this.state;
+    axios.put(`/api/topics/${this.props.match.params.id}`)
+    .then( res => {
+      this.props.history.push("/topics");
+    })
   }
 
   
@@ -30,8 +36,8 @@ class TopicsForm extends React.Component {
 
     return (
       <div>
-        <Header as="h1">New Topic</Header>
-        <Form onSubmit={this.handleSubmit}>
+        <Header as="h1">Edit Topic</Header>
+        <Form onSubmit={this.updateView}>
           <Form.Group >
             <Form.Input
               label='Topic'
@@ -65,8 +71,5 @@ class TopicsForm extends React.Component {
   }
 }
 
-export default TopicsForm;
+export default Topic;
       
-        
-    
-        
