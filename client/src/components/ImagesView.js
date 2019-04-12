@@ -18,22 +18,20 @@ class ImagesView extends React.Component {
     case 1 :
     return images.map( images => (
       <>
-        
        <div style={{display: "flex", flexWrap: "wrap"}}>
          {this.state.images.map(i=>
-           <div key={this.state.images.id} style={{margin: "20px", zIndex: "2", textAlign: "Center"}}>
+           <div key={this.state.images.id} style={{ zIndex: "0", textAlign: "Center"}}>
              <Link to={`/image/${i.id}`}>
              <div>
-               <iframe title='myframe' width="175%" height="300px" src={'https://cdn-images-1.medium.com/max/1600/0*F64HTcTbkV60DqAL.jpg'}
-                 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fluid"
+               <iframe title='myframe' width='540' height="440" src={i.image_url}
+                 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;"
                  allowfullscreen>
                </iframe>
              </div>
              </Link>
              </div>)}
        </div>
-     
-    </>
+      </>
     )
   )
     case 0 : 
@@ -61,7 +59,5 @@ class ImagesView extends React.Component {
      </>
    )
  }
-
 }
-
 export default ImagesView

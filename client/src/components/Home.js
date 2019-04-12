@@ -9,7 +9,7 @@ const Home = () => (
     <Container>
 
     <Grid divided='vertically' celled padded style={GridStyle}>
-      <Grid.Row overflow='visible' columns={2} style={{height: '50%'}}>
+      <Grid.Row overFlow='visible' columns={2} style={{height: '50%'}}>
         <Grid.Column>
             <TopicsList/> 
         </Grid.Column>
@@ -35,9 +35,11 @@ const Home = () => (
 )
 
 const GridStyle = {
-  overFlow: `visible`,
+  overflow: `visible`,
   whiteSpace: `nowrap`,
   // height: `100vh`,
+  width: `100%`,
+  margin: `0`,
   backgroundColor: `#eee`,
 }
 

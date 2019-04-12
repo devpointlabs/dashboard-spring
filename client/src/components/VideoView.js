@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
-class Video extends React.Component {
+class VideoView extends React.Component {
   state = { video: [] }
   
   componentDidMount() {
@@ -20,10 +20,10 @@ class Video extends React.Component {
         <>
         <div style={{display: "flex", flexWrap: "wrap"}}>
         {this.state.video.map(v=> 
-          <div key={this.state.video.id} style={{ zIndex: "0", textAlign: "Center"}}> 
+          <div key={this.state.video.id} style={{margin: "20px", zIndex: "2", textAlign: "Center"}}> 
             <Link to={`/video/${v.id}`}>    
             <div>
-              <iframe title='myframe' width="540" height="400" src={v.video_url}
+              <iframe title='myframe'width="160%" height="440px" src={v.video_url}
                 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
               </iframe>
@@ -50,20 +50,13 @@ class Video extends React.Component {
       )
   }
 }
-
   render() {
     return (
         <>
-
        <div>{ this.renderVideos() }</div>
     
       </>
     )
   }
-
 }
-
-
-
-
-export default Video;
+export default VideoView;

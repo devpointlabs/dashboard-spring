@@ -1,17 +1,19 @@
 import React from 'react';
 import { Form, Header, } from "semantic-ui-react";
-import axios from "axios";
+import axios from "axios"
 
-class EventsForm extends React.Component {
-  defaultValues = { title: "", start_time: "", end_time: "", };
-  state = { ...this.defaultValues, };
+
+
+class TopicsForm extends React.Component {
+  // defaultValues = { title: "", topic_date: "", topic_image: "",  };
+  state = { topics: [], };
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const event = { ...this.state, };
-    axios.post("/api/events", event)
+    const topic = { ...this.state, };
+    axios.post("/api/topics", topic)
       .then( res => {
-        this.props.history.push("/eventsview");
+        this.props.history.push("/topicsview");
       })
       // this.setState({ ...this.defaultValues, });
   }
@@ -22,11 +24,11 @@ class EventsForm extends React.Component {
   }
 
   render () {
-    const { title, start_time, end_time, } = this.state;
+    const { title, topic_date, topic_image } = this.state;
 
     return (
       <div>
-        <Header as="h1">New Event</Header>
+        <Header as="h1">New Topic</Header>
         <Form onSubmit={this.handleSubmit}>
           <Form.Group widths="equal">
             <Form.Input 
@@ -38,17 +40,17 @@ class EventsForm extends React.Component {
               required
           />
           <Form.Input
-            label="Start Time"
-            name="startTime"
-            placeholder="startTime"
-            value={start_time}
+            label="Topic Date"
+            name="topic_date"
+            placeholder="Topic Date"
+            value={topic_date}
             onChange={this.handleChange}
           />
           <Form.Input
-            label="End Time"
-            name="endTime"
-            placeholder="endTime"
-            value={end_time}
+            label="Topic Image"
+            name="topic_image"
+            placeholder="Topic Image"
+            value={topic_image}
             onChange={this.handleChange}
           />
           </Form.Group>

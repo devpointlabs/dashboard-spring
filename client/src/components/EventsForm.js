@@ -32,6 +32,7 @@ class EventsForm extends React.Component {
             <Form.Input 
               label="Title"
               name="title"
+              autoFocus
               placeholder="Title"
               value={title}
               onChange={this.handleChange}
@@ -39,15 +40,15 @@ class EventsForm extends React.Component {
           />
           <Form.Input
             label="Start Time"
-            name="startTime"
-            placeholder="startTime"
+            name="start_time"
+            placeholder="Start Time"
             value={start_time}
             onChange={this.handleChange}
           />
           <Form.Input
             label="End Time"
-            name="endTime"
-            placeholder="endTime"
+            name="end_time"
+            placeholder="End Time"
             value={end_time}
             onChange={this.handleChange}
           />

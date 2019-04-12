@@ -66,7 +66,7 @@ class EventsView extends React.Component {
       return (
         <>
           <h1>You Have Too Many Events </h1>
-          <Link to=" /eventsedit">Manage Events</Link>
+          <Link to="/eventsedit">Manage Events</Link>
         </>
       )
   }
@@ -77,20 +77,18 @@ class EventsView extends React.Component {
       <div overflow='visible'>
         
         <div as='h1' textAlign='center'>{ this.renderTopics() }</div>
-
       </div>
     )
   }
 }
-
 const BackgroundStyles = {
     backgroundColor:`grey`,
   }
-
     
 export default EventsView;
       
         
            
        
+   
    
