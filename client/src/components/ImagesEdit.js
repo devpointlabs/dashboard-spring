@@ -41,8 +41,4 @@ class ImagesEdit extends React.Component {
   }
 }
 
-<<<<<<< HEAD
 export default ImagesEdit
-=======
-export default ImagesEdit
->>>>>>> d42f565b8fdfa19c9967390c2fb7c87742eadd1c

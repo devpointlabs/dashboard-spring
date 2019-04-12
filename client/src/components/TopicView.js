@@ -62,13 +62,3 @@ class TopicView extends React.Component {
 
     
 export default TopicView;
-<<<<<<< HEAD
-=======
-      
-        
-    
-      
-          
-         
-      
->>>>>>> d42f565b8fdfa19c9967390c2fb7c87742eadd1c
