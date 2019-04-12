@@ -18,6 +18,7 @@ class ImagesView extends React.Component {
     case 1 :
     return images.map( images => (
       <>
+<<<<<<< HEAD
        <div style={{display: "flex", flexWrap: "wrap"}}>
          {this.state.images.map(i=>
            <div key={this.state.images.id} style={{ zIndex: "0", textAlign: "Center"}}>
@@ -25,13 +26,28 @@ class ImagesView extends React.Component {
              <div>
                <iframe title='myframe' width='540' height="440" src={i.image_url}
                  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;"
+=======
+        
+       <div style={{display: "flex", flexWrap: "wrap"}}>
+         {this.state.images.map(i=>
+           <div key={this.state.images.id} style={{margin: "20px", zIndex: "2", textAlign: "Center"}}>
+             <Link to={`/image/${i.id}`}>
+             <div>
+               <iframe title='myframe' width="175%" height="300px" src={'https://cdn-images-1.medium.com/max/1600/0*F64HTcTbkV60DqAL.jpg'}
+                 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fluid"
+>>>>>>> d42f565b8fdfa19c9967390c2fb7c87742eadd1c
                  allowfullscreen>
                </iframe>
              </div>
              </Link>
              </div>)}
        </div>
+<<<<<<< HEAD
       </>
+=======
+     
+    </>
+>>>>>>> d42f565b8fdfa19c9967390c2fb7c87742eadd1c
     )
   )
     case 0 : 
@@ -50,6 +66,10 @@ class ImagesView extends React.Component {
     )
 }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> d42f565b8fdfa19c9967390c2fb7c87742eadd1c
  render() {
    return (
      <>
@@ -59,5 +79,11 @@ class ImagesView extends React.Component {
      </>
    )
  }
+<<<<<<< HEAD
 }
+=======
+
+}
+
+>>>>>>> d42f565b8fdfa19c9967390c2fb7c87742eadd1c
 export default ImagesView

@@ -43,4 +43,9 @@ class EventsEdit extends React.Component {
   }
 }
 
+<<<<<<< HEAD
 export default EventsEdit
+=======
+export default EventsEdit
+
+>>>>>>> d42f565b8fdfa19c9967390c2fb7c87742eadd1c
