@@ -1,23 +1,19 @@
-import React from 'react';
-import { Form, Header, } from "semantic-ui-react";
-import axios from "axios"
+import React from 'react'
+import {Form, Header,  } from 'semantic-ui-react'
 
-
-
-class TopicsForm extends React.Component {
+class Topic extends React.Component {
   // defaultValues = { title: "", topic_date: "", topic_image: "",  };
   state = { topics: [], };
 
-  handleSubmit = (e) => {
-    e.preventDefault();
-    debugger
-    const topic = { ...this.state, };
-    axios.post("/api/topics", topic)
-      .then( res => {
-        this.props.history.push("/topicsview");
-      })
-      // this.setState({ ...this.defaultValues, });
-  }
+  // handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   const topic = { ...this.state, };
+  //   axios.post("/api/topics", topic)
+  //     .then( res => {
+  //       this.props.history.push("/topicsview");
+  //     })
+  //     // this.setState({ ...this.defaultValues, });
+  // }
 
   handleChange = (e) => {
     const { name, value, } = e.target;
@@ -26,13 +22,15 @@ class TopicsForm extends React.Component {
 
   
 
+  
+
   render() {
     const { title, topic_date, topic_image, } = this.state;
 
     return (
       <div>
-        <Header as="h1">New Topic</Header>
-        <Form onSubmit={this.handleSubmit}>
+        <Header as="h1">Edit Topic</Header>
+        <Form onSubmit={this.updateView}>
           <Form.Group >
             <Form.Input
               label='Topic'
@@ -66,8 +64,5 @@ class TopicsForm extends React.Component {
   }
 }
 
-export default TopicsForm;
+export default Topic;
       
-        
-    
-        

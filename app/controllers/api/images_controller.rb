@@ -36,7 +36,7 @@ class Api::ImagesController < ApplicationController
       @image = Image.find(params[:id])
     end
 
-    def _params
+    def image_params
       params.require(:image).permit(:image_url)
     end
 

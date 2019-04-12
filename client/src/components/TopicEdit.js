@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import { Header } from 'semantic-ui-react'
+import { Header, Button } from 'semantic-ui-react'
 
 class TopicEdit extends React.Component {
   state = { topics: [], };
@@ -25,10 +25,12 @@ class TopicEdit extends React.Component {
 
     return topics.map( topic => (
       <>
-       <button onClick={ () => this.deleteTopic(topic.id) }>Delete</button>
+      <ul>
        <Header>
         { topic.title }
        </Header>
+       <Button onClick={ () => this.deleteTopic(topic.id) }>Delete</Button>
+      </ul>
       </>
      )
    )
@@ -42,3 +44,4 @@ class TopicEdit extends React.Component {
 }
 
 export default TopicEdit
+
