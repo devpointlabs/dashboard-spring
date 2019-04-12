@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Form, Header } from "semantic-ui-react";
-=======
 import { Form, Header, } from "semantic-ui-react";
-<<<<<<< HEAD
 import axios from "axios";
 
 class EventsForm extends React.Component {
@@ -14,22 +10,6 @@ class EventsForm extends React.Component {
     e.preventDefault();
     const event = { ...this.state, };
     axios.post("/api/events", event)
-=======
->>>>>>> 1227ad4623137909d88c6d0a037f1854ae0b42e8
-import axios from "axios"
-
-
-
-class TopicsForm extends React.Component {
-  // defaultValues = { title: "", topic_date: "", topic_image: "",  };
-  state = { topics: [], };
-
-  handleSubmit = (e) => {
-    e.preventDefault();
-    debugger
-    const topic = { ...this.state, };
-    axios.post("/api/topics", topic)
->>>>>>> d42f565b8fdfa19c9967390c2fb7c87742eadd1c
       .then( res => {
         this.props.history.push("/eventsview");
       })
@@ -74,21 +54,14 @@ class TopicsForm extends React.Component {
           </Form.Group>
           <Form.Button color="cyan">Submit></Form.Button>
         </Form>
-<<<<<<< HEAD
-=======
         <br/>
->>>>>>> d42f565b8fdfa19c9967390c2fb7c87742eadd1c
       </div>
     )
   }
 }
 
-<<<<<<< HEAD
-export default EventsForm;
-=======
 export default TopicsForm;
       
         
     
         
->>>>>>> d42f565b8fdfa19c9967390c2fb7c87742eadd1c

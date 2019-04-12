@@ -1,13 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Header } from 'semantic-ui-react';
-=======
-<<<<<<< HEAD
-import { Header } from 'semantic-ui-react';
-=======
-import { Header, Dropdown, Container, Card, Button, } from 'semantic-ui-react';
->>>>>>> d42f565b8fdfa19c9967390c2fb7c87742eadd1c
->>>>>>> 1227ad4623137909d88c6d0a037f1854ae0b42e8
+import { Header, Button, } from 'semantic-ui-react';
 import axios from 'axios'
 import {Link, } from 'react-router-dom'
 

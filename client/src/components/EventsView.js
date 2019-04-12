@@ -77,35 +77,16 @@ class EventsView extends React.Component {
       <div overflow='visible'>
         
         <div as='h1' textAlign='center'>{ this.renderTopics() }</div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-
->>>>>>> d42f565b8fdfa19c9967390c2fb7c87742eadd1c
->>>>>>> 1227ad4623137909d88c6d0a037f1854ae0b42e8
       </div>
     )
   }
 }
-<<<<<<< HEAD
-const BackgroundStyles = {
-    backgroundColor:`grey`,
-  }
-=======
-<<<<<<< HEAD
-const BackgroundStyles = {
-    backgroundColor:`grey`,
-  }
-=======
 
 const BackgroundStyles = {
     backgroundColor:`grey`,
   }
 
->>>>>>> d42f565b8fdfa19c9967390c2fb7c87742eadd1c
->>>>>>> 1227ad4623137909d88c6d0a037f1854ae0b42e8
     
 export default EventsView;
       
@@ -113,16 +94,3 @@ export default EventsView;
            
        
    
-<<<<<<< HEAD
-   
-=======
-<<<<<<< HEAD
-   
-=======
-   
-
-
-
-
->>>>>>> d42f565b8fdfa19c9967390c2fb7c87742eadd1c
->>>>>>> 1227ad4623137909d88c6d0a037f1854ae0b42e8
