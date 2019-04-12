@@ -3,7 +3,7 @@ import { Form, Header, } from "semantic-ui-react";
 import axios from "axios";
 
 class EventsForm extends React.Component {
-  defaultValues = { title: "", startTime: "", endTime: "", };
+  defaultValues = { title: "", start_time: "", end_time: "", };
   state = { ...this.defaultValues, };
 
   handleSubmit = (e) => {
@@ -61,4 +61,3 @@ class EventsForm extends React.Component {
 }
 
 export default EventsForm;
-

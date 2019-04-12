@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
-class Video extends React.Component {
+class VideoView extends React.Component {
   state = { video: [] }
   
   componentDidMount() {
@@ -50,20 +50,13 @@ class Video extends React.Component {
       )
   }
 }
-
   render() {
     return (
         <>
-
        <div>{ this.renderVideos() }</div>
     
       </>
     )
   }
-
 }
-
-
-
-
-export default Video;
+export default VideoView;

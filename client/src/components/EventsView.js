@@ -77,17 +77,13 @@ class EventsView extends React.Component {
       <div overflow='visible'>
         
         <div as='h1' textAlign='center'>{ this.renderTopics() }</div>
-
-
       </div>
     )
   }
 }
-
 const BackgroundStyles = {
     backgroundColor:`grey`,
   }
-
     
 export default EventsView;
       
@@ -96,7 +92,3 @@ export default EventsView;
        
    
    
-
-
-
-

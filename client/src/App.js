@@ -26,7 +26,7 @@ import EventsEdit from './components/EventsEdit'
 
 const App = () => (
   <div>
-  {/* <Navbar /> */}
+  <Navbar />
   <FetchUser>
     <Container>
       <Switch>
@@ -36,7 +36,7 @@ const App = () => (
         <Route exact path="/topicsform" component={TopicsForm} />
         <Route exact path="/topicsview" component={TopicView} />
         <Route exact path="/topics/edit" component={TopicEdit} />
-        <Route exact path="/topics/:id" component={Topic} />
+        <Route exact path="/topic/:id" component={Topic} />
         <Route exact path="/eventsform" component={EventsForm} />
         <Route exact path="/eventsview" component={EventsView} />
         <Route exact path="/eventsedit" component={EventsEdit}/>
@@ -56,6 +56,3 @@ const App = () => (
 )
 
 export default App;
-    
-
-

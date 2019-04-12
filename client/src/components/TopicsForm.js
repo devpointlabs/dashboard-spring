@@ -19,45 +19,42 @@ class TopicsForm extends React.Component {
   }
 
   handleChange = (e) => {
-    const { name, value, } = e.target;
+    const{ name, value, } = e.target
     this.setState({ [name]: value, });
   }
 
-  
-
-  render() {
-    const { title, topic_date, topic_image, } = this.state;
+  render () {
+    const { title, topic_date, topic_image } = this.state;
 
     return (
       <div>
         <Header as="h1">New Topic</Header>
         <Form onSubmit={this.handleSubmit}>
-          <Form.Group >
-            <Form.Input
-              label='Topic'
-              autoFocus
-              name='title'
+          <Form.Group widths="equal">
+            <Form.Input 
+              label="Title"
+              name="title"
+              placeholder="Title"
               value={title}
-              placeholder='Topic'
               onChange={this.handleChange}
               required
-            />
-            <Form.Input
-              label="Date"
-              name="topic_date"
-              placeholder="Date"
-              value={topic_date}
-              onChange={this.handleChange}
-            />
-            <Form.Input
-              label="Image"
-              name="topic_image"
-              placeholder="Image"
-              value={topic_image}
-              onChange={this.handleChange}
-            />
+          />
+          <Form.Input
+            label="Topic Date"
+            name="topic_date"
+            placeholder="Topic Date"
+            value={topic_date}
+            onChange={this.handleChange}
+          />
+          <Form.Input
+            label="Topic Image"
+            name="topic_image"
+            placeholder="Topic Image"
+            value={topic_image}
+            onChange={this.handleChange}
+          />
           </Form.Group>
-          <Form.Button color="purple">Submit</Form.Button>
+          <Form.Button color="cyan">Submit></Form.Button>
         </Form>
         <br/>
       </div>
