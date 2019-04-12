@@ -66,7 +66,7 @@ class EventsView extends React.Component {
       return (
         <>
           <h1>You Have Too Many Events </h1>
-          <Link to=" /eventsedit">Manage Events</Link>
+          <Link to="/eventsedit">Manage Events</Link>
         </>
       )
   }

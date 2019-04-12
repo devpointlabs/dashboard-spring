@@ -10,7 +10,6 @@ class TopicsForm extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    debugger
     const topic = { ...this.state, };
     axios.post("/api/topics", topic)
       .then( res => {

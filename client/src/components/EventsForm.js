@@ -22,7 +22,7 @@ class EventsForm extends React.Component {
   }
 
   render () {
-    const { title, startTime, endTime, } = this.state;
+    const { title, start_time, end_time, } = this.state;
 
     return (
       <div>
@@ -32,6 +32,7 @@ class EventsForm extends React.Component {
             <Form.Input 
               label="Title"
               name="title"
+              autoFocus
               placeholder="Title"
               value={title}
               onChange={this.handleChange}
@@ -39,16 +40,16 @@ class EventsForm extends React.Component {
           />
           <Form.Input
             label="Start Time"
-            name="startTime"
-            placeholder="startTime"
-            value={startTime}
+            name="start_time"
+            placeholder="Start Time"
+            value={start_time}
             onChange={this.handleChange}
           />
           <Form.Input
             label="End Time"
-            name="endTime"
-            placeholder="endTime"
-            value={endTime}
+            name="end_time"
+            placeholder="End Time"
+            value={end_time}
             onChange={this.handleChange}
           />
           </Form.Group>
@@ -60,3 +61,4 @@ class EventsForm extends React.Component {
 }
 
 export default EventsForm;
+

@@ -26,7 +26,7 @@ import EventsEdit from './components/EventsEdit'
 
 const App = () => (
   <div>
-  <Navbar />
+  {/* <Navbar /> */}
   <FetchUser>
     <Container>
       <Switch>
