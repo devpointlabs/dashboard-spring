@@ -36,7 +36,15 @@ const App = () => (
         <Route exact path="/topicsform" component={TopicsForm} />
         <Route exact path="/topicsview" component={TopicView} />
         <Route exact path="/topics/edit" component={TopicEdit} />
+<<<<<<< HEAD
         <Route exact path="/topic/:id" component={Topic} />
+=======
+<<<<<<< HEAD
+        <Route exact path="/topic/:id" component={Topic} />
+=======
+        <Route exact path="/topics/:id" component={Topic} />
+>>>>>>> d42f565b8fdfa19c9967390c2fb7c87742eadd1c
+>>>>>>> 1227ad4623137909d88c6d0a037f1854ae0b42e8
         <Route exact path="/eventsform" component={EventsForm} />
         <Route exact path="/eventsview" component={EventsView} />
         <Route exact path="/eventsedit" component={EventsEdit}/>
@@ -55,4 +63,15 @@ const App = () => (
 </div>
 )
 
+<<<<<<< HEAD
 export default App;
+=======
+<<<<<<< HEAD
+export default App;
+=======
+export default App;
+    
+
+
+>>>>>>> d42f565b8fdfa19c9967390c2fb7c87742eadd1c
+>>>>>>> 1227ad4623137909d88c6d0a037f1854ae0b42e8

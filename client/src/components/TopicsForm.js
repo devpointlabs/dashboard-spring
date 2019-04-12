@@ -1,5 +1,21 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Form, Header } from "semantic-ui-react";
+=======
+import { Form, Header, } from "semantic-ui-react";
+<<<<<<< HEAD
+import axios from "axios";
+
+class EventsForm extends React.Component {
+  defaultValues = { title: "", start_time: "", end_time: "", };
+  state = { ...this.defaultValues, };
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    const event = { ...this.state, };
+    axios.post("/api/events", event)
+=======
+>>>>>>> 1227ad4623137909d88c6d0a037f1854ae0b42e8
 import axios from "axios"
 
 
@@ -13,61 +29,66 @@ class TopicsForm extends React.Component {
     debugger
     const topic = { ...this.state, };
     axios.post("/api/topics", topic)
+>>>>>>> d42f565b8fdfa19c9967390c2fb7c87742eadd1c
       .then( res => {
-        this.props.history.push("/topicsview");
+        this.props.history.push("/eventsview");
       })
       // this.setState({ ...this.defaultValues, });
   }
 
   handleChange = (e) => {
-    const { name, value, } = e.target;
+    const{ name, value, } = e.target
     this.setState({ [name]: value, });
   }
 
-  
-
-  render() {
-    const { title, topic_date, topic_image, } = this.state;
+  render () {
+    const { title, start_time, end_time, } = this.state;
 
     return (
       <div>
-        <Header as="h1">New Topic</Header>
+        <Header as="h1">New Event</Header>
         <Form onSubmit={this.handleSubmit}>
-          <Form.Group >
-            <Form.Input
-              label='Topic'
-              autoFocus
-              name='title'
+          <Form.Group widths="equal">
+            <Form.Input 
+              label="Title"
+              name="title"
+              placeholder="Title"
               value={title}
-              placeholder='Topic'
               onChange={this.handleChange}
               required
-            />
-            <Form.Input
-              label="Date"
-              name="topic_date"
-              placeholder="Date"
-              value={topic_date}
-              onChange={this.handleChange}
-            />
-            <Form.Input
-              label="Image"
-              name="topic_image"
-              placeholder="Image"
-              value={topic_image}
-              onChange={this.handleChange}
-            />
+          />
+          <Form.Input
+            label="Start Time"
+            name="startTime"
+            placeholder="startTime"
+            value={start_time}
+            onChange={this.handleChange}
+          />
+          <Form.Input
+            label="End Time"
+            name="endTime"
+            placeholder="endTime"
+            value={end_time}
+            onChange={this.handleChange}
+          />
           </Form.Group>
-          <Form.Button color="purple">Submit</Form.Button>
+          <Form.Button color="cyan">Submit></Form.Button>
         </Form>
+<<<<<<< HEAD
+=======
         <br/>
+>>>>>>> d42f565b8fdfa19c9967390c2fb7c87742eadd1c
       </div>
     )
   }
 }
 
+<<<<<<< HEAD
+export default EventsForm;
+=======
 export default TopicsForm;
       
         
     
         
+>>>>>>> d42f565b8fdfa19c9967390c2fb7c87742eadd1c

@@ -41,4 +41,12 @@ class VideoEdit extends React.Component {
   }
 }
 
+<<<<<<< HEAD
 export default VideoEdit
+=======
+<<<<<<< HEAD
+export default VideoEdit
+=======
+export default VideoEdit
+>>>>>>> d42f565b8fdfa19c9967390c2fb7c87742eadd1c
+>>>>>>> 1227ad4623137909d88c6d0a037f1854ae0b42e8
