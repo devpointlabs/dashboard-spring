@@ -17,6 +17,9 @@ import TopicEdit from './components/TopicEdit'
 import VideoView from './components/VideoView'
 import VideoForm from "./components/VideoForm"
 import VideoEdit from './components/VideoEdit'
+import ImagesView from './components/ImagesView'
+import ImagesEdit from './components/ImagesEdit'
+import ImagesForm from './components/ImagesForm'
 
 
 
@@ -38,6 +41,10 @@ const App = () => (
         <Route exact path="/videoform" component={VideoForm} />
         <Route exact path="/videoview" component={VideoView} />
         <Route exact path="/videoedit" component={VideoEdit} />
+        <Route exact path="/imagesform" component={ImagesForm} />
+        <Route exact path="/imagesview" component={ImagesView} />
+        <Route exact path="/imagesedit" component={ImagesEdit} />
+
         
         <Route component={NoMatch} />
       </Switch>

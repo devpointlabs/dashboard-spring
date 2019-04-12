@@ -5,7 +5,7 @@ import  Events  from './Events';
 import axios from 'axios';
 import { Link, } from 'react-router-dom';
 import VideoView from './VideoView'
-
+import ImagesView from './ImagesView'
 const Home = () => (
   <div>
     
@@ -15,7 +15,7 @@ const Home = () => (
             <TopicsList/> 
         </Grid.Column>
         <Grid.Column>
-          <Header as='h3' textAlign='center'>Picture</Header>
+          <ImagesView />
         </Grid.Column>
       </Grid.Row>
 
@@ -30,15 +30,6 @@ const Home = () => (
         </Grid.Row>
     </Grid>
     
-    
-  <Header as="h3" textAlign="center">
-    Home
-    <Link to="/video"> Video</Link>
-  </Header>
-  <Header as="h3" textAlign="center">
-    form
-    <Link to="/videoform"> VideoForm</Link>
-  </Header>
   </div>
 )
 
