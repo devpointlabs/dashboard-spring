@@ -1,5 +1,4 @@
 import React from 'react'
-import axios from 'axios';
 import {Form, Header,  } from 'semantic-ui-react'
 
 class Topic extends React.Component {
@@ -21,13 +20,7 @@ class Topic extends React.Component {
     this.setState({ [name]: value, });
   }
 
-  updateView = () => {
-    let { topics, } = this.state;
-    axios.put(`/api/topics/${this.props.match.params.id}`)
-    .then( res => {
-      this.props.history.push("/topics");
-    })
-  }
+  
 
   
 

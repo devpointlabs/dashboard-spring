@@ -1,10 +1,10 @@
 import React from 'react';
-import { Header, Form, Dropdown, Button, Container, Card, Image } from 'semantic-ui-react';
+import { Header, Image } from 'semantic-ui-react';
 import axios from 'axios'
 
 import beaker from '../Images/Beaker.png'
 import {Link, } from 'react-router-dom'
-import Topic from './Topic'
+
 
 
 

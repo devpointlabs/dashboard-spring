@@ -1,15 +1,14 @@
 import React from 'react';
-import { Header, Grid, Image, Card,} from 'semantic-ui-react';
+import {  Grid, Container,} from 'semantic-ui-react';
 import TopicsList from './TopicView'
-import  Events  from './Events';
-import axios from 'axios';
-import { Link, } from 'react-router-dom';
+import  EventsView  from './EventsView';
 import VideoView from './VideoView'
 import ImagesView from './ImagesView'
 const Home = () => (
   <div>
-    
-    <Grid divided='vertically' celled padded style={{height: '100vh'}}>
+    <Container>
+
+    <Grid divided='vertically' celled padded style={GridStyle}>
       <Grid.Row overflow='visible' columns={2} style={{height: '50%'}}>
         <Grid.Column>
             <TopicsList/> 
@@ -24,19 +23,22 @@ const Home = () => (
             <VideoView />
           </Grid.Column>
           <Grid.Column>
-            <Events />
+            <EventsView />
           </Grid.Column>
           
         </Grid.Row>
     </Grid>
+    </Container>
     
   </div>
+ 
 )
 
-  
-
-
-
-
+const GridStyle = {
+  overFlow: `visible`,
+  whiteSpace: `nowrap`,
+  // height: `100vh`,
+  backgroundColor: `#eee`,
+}
 
 export default Home;

@@ -24,7 +24,7 @@ class ImagesView extends React.Component {
            <div key={this.state.images.id} style={{margin: "20px", zIndex: "2", textAlign: "Center"}}>
              <Link to={`/image/${i.id}`}>
              <div>
-               <iframe width="175%" height="300px" src={'https://cdn-images-1.medium.com/max/1600/0*F64HTcTbkV60DqAL.jpg'}
+               <iframe title='myframe' width="175%" height="300px" src={'https://cdn-images-1.medium.com/max/1600/0*F64HTcTbkV60DqAL.jpg'}
                  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fluid"
                  allowfullscreen>
                </iframe>
