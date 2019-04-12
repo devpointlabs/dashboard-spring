@@ -67,42 +67,42 @@ class Navbar extends React.Component {
             <Menu.Item
               name='Add Video'
               id='video'
-              active={this.props.location.pathname === '/topicsform'}
+              active={this.props.location.pathname === '/videoform'}
             />
           </Link>
           <Link to='/videoedit'>
             <Menu.Item
               name='Video Edit'
               id='video edit'
-              active={this.props.location.pathname === '/topicsform'}
+              active={this.props.location.pathname === '/videoedit'}
             />
           </Link>
           <Link to='/imagesform'>
             <Menu.Item
               name='Add Image'
               id='image'
-              active={this.props.location.pathname === '/topicsform'}
+              active={this.props.location.pathname === '/imagesform'}
             />
           </Link>
           <Link to='/imagesedit'>
             <Menu.Item
               name='Image Edit'
               id='image edit'
-              active={this.props.location.pathname === '/topicsform'}
+              active={this.props.location.pathname === '/imagesedit'}
             />
           </Link>
           <Link to='/eventsform'>
             <Menu.Item
               name='Add Event'
               id='event'
-              active={this.props.location.pathname === '/topicsform'}
+              active={this.props.location.pathname === '/eventsform'}
             />
           </Link>
           <Link to='/eventsedit'>
             <Menu.Item
               name='Event Edit'
               id='event edit'
-              active={this.props.location.pathname === '/topicsform'}
+              active={this.props.location.pathname === '/eventsedit'}
             />
           </Link>
             { this.rightNavItems() }
