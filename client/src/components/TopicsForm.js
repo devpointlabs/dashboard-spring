@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Header, Card } from "semantic-ui-react";
+import { Form, Header } from "semantic-ui-react";
 import axios from "axios"
 import Topics from './Topics';
 
