@@ -1,24 +1,31 @@
 import React from "react"
 import axios from "axios"
-import { AuthConsumer, } from "../providers/AuthProvider";
 import { Button, Form, Header, } from 'semantic-ui-react';
 
 class VideoForm extends React.Component {
-    state = { video_url: "",}
+    state = { videos: [], };
 
-    handleChange = (e, { name, value, }) => this.setState({ [name]: value,});
 
     handleSubmit = (e) => {
-        e.preventDefault()
-        const u_id = this.props.auth.user.id
-        const {match: { params: { id } }, history: { push } } = this.props
-        const video = { ...this.state, user_id: u_id }
-        axios.post('/api/videos', video)
-            .then( res => push("/"))
-    }
+        e.preventDefault();
+        debugger
+        const videos = { ...this.state, };
+        axios.post("/api/videos", videos)
+          .then( res => {
+            this.props.history.push("/videoview");
+          })
+          // this.setState({ ...this.defaultValues, });
+      }
+    
+      handleChange = (e) => {
+        const { name, value, } = e.target;
+        this.setState({ [name]: value, });
+      }
+    
+      
 
     render() {
-        const { title, description, video_url, } = this.state
+        const { video_url, } = this.state;
         return(
             <>
             <div style={{ margin:"20px", }}>
@@ -30,6 +37,8 @@ class VideoForm extends React.Component {
                 <Form.Group widths="equal">
                     <Form.Input 
                         required
+                        autoFocus
+                        label='Video'
                         placeholder="Link"
                         name="video_url"
                         value={video_url}
@@ -43,12 +52,6 @@ class VideoForm extends React.Component {
     }
 }
 
-const ConnectedVideoForm = (props) => (
-    <AuthConsumer>
-        {auth =>
-            <VideoForm {...props} auth={auth} />
-        }
-    </AuthConsumer>
-)
 
-export default ConnectedVideoForm
+
+export default VideoForm

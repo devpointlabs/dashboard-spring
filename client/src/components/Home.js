@@ -1,52 +1,44 @@
 import React from 'react';
-import { Header, Grid} from 'semantic-ui-react';
-import TopicView from './TopicView';
-import Images from './Images';
-import  Events  from './Events';
-import axios from 'axios';
-import { Link, } from 'react-router-dom';
-import Video from './Video'
-
+import {  Grid, Container,} from 'semantic-ui-react';
+import TopicsList from './TopicView'
+import  EventsView  from './EventsView';
+import VideoView from './VideoView'
+import ImagesView from './ImagesView'
 const Home = () => (
   <div>
-    
-    <Grid overflow='visible' divided='vertically' celled padded style={{height: '100vh'}}>
-      <Grid.Row columns={2} style={{height: '50%'}}>
+    <Container>
+
+    <Grid divided='vertically' celled padded style={GridStyle}>
+      <Grid.Row overflow='visible' columns={2} style={{height: '50%'}}>
         <Grid.Column>
-            <TopicView /> 
+            <TopicsList/> 
         </Grid.Column>
         <Grid.Column>
-            <Images />
+          <ImagesView />
         </Grid.Column>
       </Grid.Row>
 
       <Grid.Row columns={2} style={{height: '50%'}}>
           <Grid.Column>
-            <Video />
+            <VideoView />
           </Grid.Column>
           <Grid.Column>
-            <Events />
+            <EventsView />
           </Grid.Column>
           
         </Grid.Row>
     </Grid>
+    </Container>
     
-    <Header as="h3" textAlign="center">Dashboard</Header>
-  <Header as="h3" textAlign="center">
-    Home
-    <Link to="/video"> Video</Link>
-  </Header>
-  <Header as="h3" textAlign="center">
-    form
-    <Link to="/videoform"> VideoForm</Link>
-  </Header>
   </div>
+ 
 )
 
-  
-
-
-
-
+const GridStyle = {
+  overFlow: `visible`,
+  whiteSpace: `nowrap`,
+  // height: `100vh`,
+  backgroundColor: `#eee`,
+}
 
 export default Home;

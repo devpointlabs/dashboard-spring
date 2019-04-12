@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-import { AuthConsumer, } from "../providers/AuthProvider";
 
 class Images extends React.Component {
   state = { images: [] }
@@ -11,7 +10,7 @@ class Images extends React.Component {
       .then(res =>
         this.setState({ images: res.data }))
   }
-
+ 
   render() {
     return (
       <>
@@ -33,11 +32,5 @@ class Images extends React.Component {
   }
 
 }
-const ConnectedImages = (props) => (
-  <AuthConsumer>
-      {auth =>
-          <Images {...props} auth={auth} />
-      }
-  </AuthConsumer>
-)
-export default ConnectedImages
+
+export default Images
