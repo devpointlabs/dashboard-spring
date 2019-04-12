@@ -23,7 +23,7 @@ class Video extends React.Component {
           <div key={this.state.video.id} style={{margin: "20px", zIndex: "2", textAlign: "Center"}}> 
             <Link to={`/video/${v.id}`}>    
             <div>
-              <iframe title='myframe'width="160%" height="440px" src={v.video_url}
+              <iframe title='myframe' width="450" height="315" src={v.video_url}
                 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
               </iframe>
@@ -50,20 +50,13 @@ class Video extends React.Component {
       )
   }
 }
-
   render() {
     return (
         <>
-
        <div>{ this.renderVideos() }</div>
     
       </>
     )
   }
-
 }
-
-
-
-
 export default Video;
