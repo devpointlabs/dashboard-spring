@@ -2,7 +2,7 @@ class Api::EventsController < ApplicationController
   before_action :set_event, only: [:show, :update, :destroy]
 
   def index
-    render json: Event.all.map{|event|{title: event.title, start_time:event.start_time.strftime("%Y-%m-%d %I:%M%p"),
+    render json: Event.all.map{|event|{id: event.id, title: event.title, start_time:event.start_time.strftime("%Y-%m-%d %I:%M%p"),
     end_time:event.end_time.strftime("%Y-%m-%d %I:%M%p")}}
   end
 
