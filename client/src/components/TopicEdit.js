@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import { Header, Button } from 'semantic-ui-react'
+import { Image, Button, Card } from 'semantic-ui-react'
 
 class TopicEdit extends React.Component {
   state = { topics: [], };
@@ -24,14 +24,26 @@ class TopicEdit extends React.Component {
     const { topics } = this.state
 
     return topics.map( topic => (
-      <>
-      <ul>
-       <Header>
-        { topic.title }
-       </Header>
-       <Button onClick={ () => this.deleteTopic(topic.id) }>Delete</Button>
-      </ul>
-      </>
+      
+      <Card.Group>      
+        <Card>
+          <Card.Content>
+            <Image floated='right' size='mini' src={topic.topic_image} />
+            <Card.Header>{ topic.title }</Card.Header>
+            <Card.Description>
+              DATE AND TIME
+            </Card.Description>
+          </Card.Content>
+          <Card.Content extra>
+            <div className='ui two buttons'>
+              <Button basic color='red' onClick={ () => this.deleteTopic(topic.id) }>
+                Delete
+              </Button>
+            </div>
+          </Card.Content>
+        </Card>
+      </Card.Group>
+      
      )
    )
   }
@@ -44,4 +56,5 @@ class TopicEdit extends React.Component {
 }
 
 export default TopicEdit
+            
 
