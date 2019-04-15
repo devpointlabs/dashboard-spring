@@ -58,4 +58,3 @@ class EventsEdit extends React.Component {
 }
 
 export default EventsEdit
-
