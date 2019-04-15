@@ -20,6 +20,7 @@ class Login extends React.Component {
     const { email, password, } = this.state;
   
     return (
+      <div style={styles.background}>
       <Segment basic>
         <Header as='h1' textAlign='center'>Login</Header>
         <Form onSubmit={this.handleSubmit}>
@@ -46,9 +47,18 @@ class Login extends React.Component {
           </Segment>
         </Form>
       </Segment>
+      </div>
     )
   }
 }
+
+const styles = {
+  background: {
+    backgroundColor: "#8a2be2",
+    height: "100vh",
+  }
+}
+
 
 export default class ConnectedLogin extends React.Component {
   render() {
@@ -59,3 +69,5 @@ export default class ConnectedLogin extends React.Component {
     )
   }
 }
+
+

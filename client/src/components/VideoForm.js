@@ -26,7 +26,7 @@ class VideoForm extends React.Component {
     render() {
         const { video_url, } = this.state;
         return(
-            <>
+            <div style={styles.background}>
             <div style={{ margin:"20px", }}>
             <Header as="h1">
                 New Video
@@ -46,11 +46,16 @@ class VideoForm extends React.Component {
                 </Form.Group>
                 <Button type="submit">Submit</Button>
             </Form>
-            </>
+            </div>
         )
     }
 }
 
-
+const styles = {
+  background: {
+    backgroundColor: "#8a2be2",
+    height: "100vh",
+  }
+}
 
 export default VideoForm

@@ -25,6 +25,7 @@ class Register extends React.Component {
     const { email, password, passwordConfirmation, } = this.state;
     
     return (
+      <div style={styles.background}>
       <Segment basic>
         <Header as='h1' textAlign='center'>Register</Header>
         <Form onSubmit={this.handleSubmit}>
@@ -60,7 +61,15 @@ class Register extends React.Component {
           </Segment>
         </Form>
       </Segment>
+      </div>
     )
+  }
+}
+
+const styles = {
+  background: {
+    backgroundColor: "#8a2be2",
+    height: "100vh",
   }
 }
 

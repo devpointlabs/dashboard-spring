@@ -11,7 +11,7 @@ class EventsForm extends React.Component {
     const event = { ...this.state, };
     axios.post("/api/events", event)
       .then( res => {
-        this.props.history.push("/eventsview");
+        this.props.history.push("/eventsform");
       })
       this.setState({ ...this.defaultValues, });
   }
@@ -25,7 +25,7 @@ class EventsForm extends React.Component {
     const { title, start_time, end_time, } = this.state;
 
     return (
-      <div>
+      <div style={styles.background}>
         <Header as="h1">New Event</Header>
         <Form onSubmit={this.handleSubmit}>
           <Form.Group widths="equal">
@@ -57,6 +57,13 @@ class EventsForm extends React.Component {
         </Form>
       </div>
     )
+  }
+}
+
+const styles = {
+  background: {
+    backgroundColor: "#8a2be2",
+    height: "100vh",
   }
 }
 

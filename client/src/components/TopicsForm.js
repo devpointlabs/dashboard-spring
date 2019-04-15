@@ -13,7 +13,7 @@ class TopicsForm extends React.Component {
     const topic = { ...this.state, };
     axios.post("/api/topics", topic)
       .then( res => {
-        this.props.history.push("/topicsview");
+        this.props.history.push("/topicsform");
       })
       // this.setState({ ...this.defaultValues, });
   }
@@ -25,9 +25,8 @@ class TopicsForm extends React.Component {
 
   render () {
     const { title, topic_date, topic_image } = this.state;
-
     return (
-      <div>
+      <div style={styles.background}>
         <Header as="h1">New Topic</Header>
         <Form onSubmit={this.handleSubmit}>
           <Form.Group widths="equal">
@@ -59,6 +58,13 @@ class TopicsForm extends React.Component {
         <br/>
       </div>
     )
+  }
+}
+
+const styles = {
+  background: {
+    backgroundColor: "#8a2be2",
+    height: "100vh",
   }
 }
 
