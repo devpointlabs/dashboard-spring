@@ -8,7 +8,6 @@ class VideoForm extends React.Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        debugger
         const videos = { ...this.state, };
         axios.post("/api/videos", videos)
           .then( res => {
