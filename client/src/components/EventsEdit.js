@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import { Header, Button } from 'semantic-ui-react'
+import { Header, Button, Card } from 'semantic-ui-react'
 
 class EventsEdit extends React.Component {
   state = { events: [], };
@@ -25,12 +25,26 @@ class EventsEdit extends React.Component {
 
     return events.map( event => (
       <>
-      <ul>
-       <Header>
-        { event.title }
-       </Header>
-       <Button onClick={ () => this.deleteEvent(event.id) }>Delete</Button>
-      </ul>
+     
+      
+      <Card.Group>      
+        <Card>
+          <Card.Content>
+            <Card.Header>{ event.title }</Card.Header>
+            
+            <Card.Description>
+              DATE AND TIME
+            </Card.Description>
+          </Card.Content>
+          <Card.Content extra>
+            <div className='ui two buttons'>
+              <Button basic color='red' onClick={ () => this.deleteEvent(event.id) }>
+                Delete
+              </Button>
+            </div>
+          </Card.Content>
+        </Card>
+      </Card.Group>
       </>
      )
    )
