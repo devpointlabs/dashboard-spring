@@ -20,41 +20,75 @@ class EventsView extends React.Component {
     const { events, } = this.state
     switch  (events.length) {
       case 1 :
-      return events.map( event => (
+      return (
       <>
-       <Header textAlign='center' as='h1'>Calender of Events</Header>
-       <Header textAlign='center' as='h3'>#Season #Year</Header>
-       <Table celled>
-       
-       <Table.Body style={BackgroundStyles}>
-         <Table.Row>
+    <Header textAlign='center' as='h1'>Calender of Events</Header>
+    <Header textAlign='center' as='h3'>#Season #Year</Header>
+    {events.map( event => (
+    
+      <Table celled>
+    
+        <Table.Body style={BackgroundStyles}>
+          <Table.Row>
             <Table.Cell>
-             <Header>{event.title}</Header>
-             <Header.Subheader>{event.start_time}</Header.Subheader>
-             <Header.Subheader>{event.end_time}</Header.Subheader>
+            <Header>{event.title}</Header>
+            <Header.Subheader>{event.start_time}</Header.Subheader>
+            <Header.Subheader>{event.end_time}</Header.Subheader>
             </Table.Cell>
-         </Table.Row>
-       
-       
-         <Table.Row>
-           <Table.Cell>
-             <Header>EVENT </Header>
-             <Header.Subheader>#DATE</Header.Subheader>
-             <Header.Subheader>#TIME</Header.Subheader>
-            </Table.Cell>
-         </Table.Row>
-         <Table.Row>
-            <Table.Cell>
-             <Header>EVENT </Header>
-             <Header.Subheader>#DATE</Header.Subheader>
-             <Header.Subheader>#TIME</Header.Subheader>
-            </Table.Cell>
-         </Table.Row>
-       </Table.Body>
-     </Table>
-    </>
+          </Table.Row>
+        </Table.Body>
+      </Table>
       )
+    )}
+  </>
+  )
+      case 2 :
+      return (
+        <>
+      <Header textAlign='center' as='h1'>Calender of Events</Header>
+      <Header textAlign='center' as='h3'>#Season #Year</Header>
+      {events.map( event => (
+      
+        <Table celled>
+      
+          <Table.Body style={BackgroundStyles}>
+            <Table.Row>
+              <Table.Cell>
+              <Header>{event.title}</Header>
+              <Header.Subheader>{event.start_time}</Header.Subheader>
+              <Header.Subheader>{event.end_time}</Header.Subheader>
+              </Table.Cell>
+            </Table.Row>
+          </Table.Body>
+        </Table>
+        )
+      )}
+    </>
     )
+    case 3 :
+    return (
+      <>
+    <Header textAlign='center' as='h1'>Calender of Events</Header>
+    <Header textAlign='center' as='h3'>#Season #Year</Header>
+    {events.map( event => (
+    
+      <Table celled>
+    
+        <Table.Body style={BackgroundStyles}>
+          <Table.Row>
+            <Table.Cell>
+            <Header>{event.title}</Header>
+            <Header.Subheader>{event.start_time}</Header.Subheader>
+            <Header.Subheader>{event.end_time}</Header.Subheader>
+            </Table.Cell>
+          </Table.Row>
+        </Table.Body>
+      </Table>
+      )
+    )}
+  </>
+  )
+
       case 0 : 
       return (
         <>
