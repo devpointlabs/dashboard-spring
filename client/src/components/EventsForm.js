@@ -11,7 +11,7 @@ class EventsForm extends React.Component {
     const event = { ...this.state, };
     axios.post("/api/events", event)
       .then( res => {
-        this.props.history.push("/eventsform");
+        this.props.history.push("/eventsview");
       })
       this.setState({ ...this.defaultValues, });
   }

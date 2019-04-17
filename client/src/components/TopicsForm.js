@@ -13,7 +13,7 @@ class TopicsForm extends React.Component {
     const topic = { ...this.state, };
     axios.post("/api/topics", topic)
       .then( res => {
-        this.props.history.push("/topicsform");
+        this.props.history.push("/topicsview");
       })
       // this.setState({ ...this.defaultValues, });
   }
