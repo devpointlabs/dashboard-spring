@@ -73,7 +73,7 @@ class Register extends React.Component {
 
 const styles = {
   background: {
-    backgroundColor: "#8a2be2",
+    backgroundColor: "#6E54A3",
     height: "100vh",
   },
   text: {
