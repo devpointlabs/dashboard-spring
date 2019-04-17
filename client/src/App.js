@@ -25,10 +25,11 @@ import EventsEdit from './components/EventsEdit'
 
 
 const App = () => (
+  
   <div>
   <Navbar />
   <FetchUser>
-  <div style= {{backgroundColor: "#8a2be2", padding: "70px", margin: "0px"}}> 
+  <div style= {{backgroundColor: "#6E54A3", padding: "70px", margin: "0px"}}> 
     <Container>
       <Switch>
         <ProtectedRoute exact path="/" component={Home} />
@@ -54,7 +55,7 @@ const App = () => (
     </Container>
 </div>
   </FetchUser>
-  </div>
+</div>
 )
 
 export default App;
