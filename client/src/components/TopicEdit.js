@@ -1,9 +1,10 @@
 import React from 'react'
 import axios from 'axios'
-import { Image, Button, Card } from 'semantic-ui-react'
+import { Image, Button, Card, Form, Header } from 'semantic-ui-react'
+import { Link, } from 'react-router-dom'
 
 class TopicEdit extends React.Component {
-  state = { topics: [], };
+  state = { topics: [], editing: false, };
 
   componentDidMount() {
     axios.get("/api/topics")
@@ -19,6 +20,54 @@ class TopicEdit extends React.Component {
         this.setState({ topics: topics.filter(topic => topic.id !== id), })
       })
   }
+
+  toggleEdit = () => {
+    this.setState( state => {
+      return { editing: !state.editing, };
+    })
+  }
+
+  // handleSubmit
+
+  editTopic = (id) => {
+    const { title, topic_date, topic_image } = this.state;
+
+    return (
+      <div>
+        <Header as="h1">Edit Topic</Header>
+        <Form onSubmit={this.handleSubmit}>
+          <Form.Group widths="equal">
+            <Form.Input 
+              label="Title"
+              name="title"
+              placeholder="Title"
+              value={title}
+              onChange={this.handleChange}
+              required
+          />
+          <Form.Input
+            label="Topic Date"
+            name="topic_date"
+            placeholder="Topic Date"
+            value={topic_date}
+            onChange={this.handleChange}
+          />
+          <Form.Input
+            label="Topic Image"
+            name="topic_image"
+            placeholder="Topic Image"
+            value={topic_image}
+            onChange={this.handleChange}
+          />
+          </Form.Group>
+          <Form.Button basic color='green'  >Update</Form.Button>
+        </Form>
+        <br/>
+      </div>
+    )
+  }
+
+  
 
   renderTopics = () => {
     const { topics } = this.state
@@ -38,6 +87,12 @@ class TopicEdit extends React.Component {
               <Button basic color='red' onClick={ () => this.deleteTopic(topic.id) }>
                 Delete
               </Button>
+              <Link to='/topicupdate/${id}'>
+              <Button basic color='green'> 
+                Update
+              </Button>
+              </Link>
+              
             </div>
           </Card.Content>
         </Card>
@@ -49,7 +104,10 @@ class TopicEdit extends React.Component {
 
   render () {
     return (
+      <>
       <div>{this.renderTopics()}</div>
+
+      </>
     )
   }
 }

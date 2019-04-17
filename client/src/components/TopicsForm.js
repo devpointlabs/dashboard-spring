@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Header, } from "semantic-ui-react";
+import { Form, Header, Input} from "semantic-ui-react";
 import axios from "axios"
 
 
@@ -49,13 +49,12 @@ class TopicsForm extends React.Component {
           />
           <label style={{color: 'white'}}>Topic Image</label>
           <Form.Input
-            
+            type='file'
             name="topic_image"
             placeholder="Topic Image"
             value={topic_image}
             onChange={this.handleChange}
           />
-         
           <Form.Button color="cyan">Submit></Form.Button>
         </Form>
         <br/>
