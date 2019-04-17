@@ -1,6 +1,6 @@
 import React from "react"
 import axios from "axios"
-import { Button, Form, Header, } from 'semantic-ui-react';
+import { Button, Form, Header, Input } from 'semantic-ui-react';
 
 class VideoForm extends React.Component {
     state = { videos: [], };
@@ -8,7 +8,6 @@ class VideoForm extends React.Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        debugger
         const videos = { ...this.state, };
         axios.post("/api/videos", videos)
           .then( res => {
@@ -22,6 +21,12 @@ class VideoForm extends React.Component {
         this.setState({ [name]: value, });
       }
     
+      fileSelectHandler = (e) => {
+          this.setState({
+              videos: e.target.files[0]
+          })
+          
+      }
       
 
     render() {
@@ -34,7 +39,7 @@ class VideoForm extends React.Component {
             </Header>
             </div>
             <Form onSubmit={this.handleSubmit}>
-                <Form.Group widths="equal">
+                {/* <Form.Group widths="equal">
                     <Form.Input 
                         required
                         autoFocus
@@ -44,8 +49,9 @@ class VideoForm extends React.Component {
                         value={video_url}
                         onChange={this.handleChange}
                     />
-                </Form.Group>
-                <Button type="submit">Submit</Button>
+                </Form.Group> */}
+                <Input placeholder='File' type='file' onChange={this.fileSelectHandler} />
+                <Button type="submit">Upload</Button>
             </Form>
             </>
         )

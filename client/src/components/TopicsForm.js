@@ -54,7 +54,7 @@ class TopicsForm extends React.Component {
             onChange={this.handleChange}
           />
           </Form.Group>
-          <Form.Button color="cyan">Submit></Form.Button>
+          <Form.Button color="cyan">Submit</Form.Button>
         </Form>
         <br/>
       </div>

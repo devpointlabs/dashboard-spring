@@ -1,5 +1,5 @@
 import React from 'react';
-import {  Grid, Container,} from 'semantic-ui-react';
+import {  Grid, Container, Advertisement} from 'semantic-ui-react';
 import TopicsList from './TopicView'
 import  EventsView  from './EventsView';
 import VideoView from './VideoView'
@@ -17,6 +17,7 @@ const Home = () => (
           <ImagesView />
         </Grid.Column>
       </Grid.Row>
+
 
       <Grid.Row columns={2} style={{height: '50%'}}>
           <Grid.Column>
@@ -41,6 +42,10 @@ const GridStyle = {
   width: `100%`,
   margin: `0`,
   backgroundColor: `#eee`,
+}
+
+const Header = {
+  margin: '0'
 }
 
 export default Home;
