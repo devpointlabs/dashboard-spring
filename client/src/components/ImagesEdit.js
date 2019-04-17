@@ -24,7 +24,7 @@ class ImagesEdit extends React.Component {
   renderImages = () => {
     const { images } = this.state
     return images.map( image => (
-      <div style={styles.background}>
+      
        <Card.Group>      
         <Card>
           <Card.Content>
@@ -42,7 +42,7 @@ class ImagesEdit extends React.Component {
           </Card.Content>
         </Card>
       </Card.Group>
-      </div>
+      
      )
    )
   }

@@ -51,7 +51,9 @@ class TopicView extends React.Component {
   render() {
     return (
       <div overflow='visible'>
+        <Link to="/addedit">
         <Header as='h1' textAlign='center'>Today's Lecture Topic:</Header>
+        </Link>
         <Header as='h4' textAlign='center'>University of Utah Full-Time Web Development</Header>
         <Header textAlign='center'>
         <iframe src="http://free.timeanddate.com/clock/i6pzp2mf/n220/fn7/fs24/fc5900b3/tct/pct/ftb/tt1/tw0" frameborder="0" width="247" height="35" allowTransparency="true"></iframe>
