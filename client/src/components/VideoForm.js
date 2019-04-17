@@ -1,6 +1,6 @@
 import React from "react"
 import axios from "axios"
-import { Button, Form, Header, } from 'semantic-ui-react';
+import { Button, Form, Header, Input } from 'semantic-ui-react';
 
 class VideoForm extends React.Component {
     state = { videos: [], };
@@ -21,6 +21,12 @@ class VideoForm extends React.Component {
         this.setState({ [name]: value, });
       }
     
+      fileSelectHandler = (e) => {
+          this.setState({
+              videos: e.target.files[0]
+          })
+          
+      }
       
 
     render() {
