@@ -27,23 +27,22 @@ class VideoForm extends React.Component {
         const { video_url, } = this.state;
         return(
             <div style={styles.background}>
-            <div style={{ margin:"20px", }}>
-            <Header as="h1">
-                New Video
+            <Header as="h1" style={styles.text}>
+            New Video
             </Header>
-            </div>
+            <label style={{color: 'white'}}>Add A Video Link</label>
             <Form onSubmit={this.handleSubmit}>
-                <Form.Group widths="equal">
+                
                     <Form.Input 
                         required
                         autoFocus
-                        label='Video'
+                        
                         placeholder="Link"
                         name="video_url"
                         value={video_url}
                         onChange={this.handleChange}
                     />
-                </Form.Group>
+                
                 <Button type="submit">Submit</Button>
             </Form>
             </div>
@@ -55,6 +54,9 @@ const styles = {
   background: {
     backgroundColor: "#8a2be2",
     height: "100vh",
+  },
+  text: {
+    color: "white"
   }
 }
 

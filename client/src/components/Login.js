@@ -22,10 +22,12 @@ class Login extends React.Component {
     return (
       <div style={styles.background}>
       <Segment basic>
-        <Header as='h1' textAlign='center'>Login</Header>
+        <Header as='h1' textAlign='center' style={styles.text}>Login</Header>
         <Form onSubmit={this.handleSubmit}>
+        <label style={{color: 'white'}}>
+          Email
           <Form.Input
-            label="Email"
+            
             autoFocus
             required         
             name='email'
@@ -33,8 +35,12 @@ class Login extends React.Component {
             placeholder='Email'
             onChange={this.handleChange}
           />
+        </label>
+
+        <label style={{color: 'white'}}>
+          Password
           <Form.Input
-            label="Password"
+            
             required
             name='password'
             value={password}
@@ -42,6 +48,7 @@ class Login extends React.Component {
             type='password'
             onChange={this.handleChange}
           />
+        </label>
           <Segment textAlign='center' basic>
             <Button primary type='submit'>Submit</Button>
           </Segment>
@@ -56,6 +63,9 @@ const styles = {
   background: {
     backgroundColor: "#8a2be2",
     height: "100vh",
+  },
+  text: {
+    color: "white"
   }
 }
 

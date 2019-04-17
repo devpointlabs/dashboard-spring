@@ -26,11 +26,11 @@ class EventsForm extends React.Component {
 
     return (
       <div style={styles.background}>
-        <Header as="h1">New Event</Header>
+        <Header as="h1" style={styles.text}>New Event</Header>
         <Form onSubmit={this.handleSubmit}>
-          <Form.Group widths="equal">
+        <label style={{color: 'white'}}>Title</label>
             <Form.Input 
-              label="Title"
+             
               name="title"
               autoFocus
               placeholder="Title"
@@ -38,21 +38,22 @@ class EventsForm extends React.Component {
               onChange={this.handleChange}
               required
           />
+          <label style={{color: 'white'}}>Start Time</label>
           <Form.Input
-            label="Start Time"
+           
             name="start_time"
             placeholder="Start Time"
             value={start_time}
             onChange={this.handleChange}
           />
+          <label style={{color: 'white'}}>End Time</label>
           <Form.Input
-            label="End Time"
+           
             name="end_time"
             placeholder="End Time"
             value={end_time}
             onChange={this.handleChange}
           />
-          </Form.Group>
           <Form.Button color="cyan">Submit></Form.Button>
         </Form>
       </div>
@@ -64,6 +65,9 @@ const styles = {
   background: {
     backgroundColor: "#8a2be2",
     height: "100vh",
+  },
+  text: {
+    color: "white"
   }
 }
 
