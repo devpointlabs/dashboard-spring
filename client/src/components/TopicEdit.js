@@ -22,13 +22,12 @@ class TopicEdit extends React.Component {
 
   renderTopics = () => {
     const { topics } = this.state
-
     return topics.map( topic => (
-      
+      <div style={styles.background}>
       <Card.Group>      
         <Card>
           <Card.Content>
-            <Image floated='right' size='mini' src={topic.topic_image} />
+            <Image floated='right' size='Medium' src={topic.topic_image} />
             <Card.Header>{ topic.title }</Card.Header>
             <Card.Description>
               DATE AND TIME
@@ -43,7 +42,7 @@ class TopicEdit extends React.Component {
           </Card.Content>
         </Card>
       </Card.Group>
-      
+      </div>
      )
    )
   }
@@ -52,6 +51,13 @@ class TopicEdit extends React.Component {
     return (
       <div>{this.renderTopics()}</div>
     )
+  }
+}
+
+const styles = {
+  background: {
+    backgroundColor: "#8a2be2",
+    height: "100vh",
   }
 }
 

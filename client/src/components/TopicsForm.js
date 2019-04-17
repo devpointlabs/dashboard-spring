@@ -25,40 +25,52 @@ class TopicsForm extends React.Component {
 
   render () {
     const { title, topic_date, topic_image } = this.state;
-
     return (
-      <div>
-        <Header as="h1">New Topic</Header>
-        <Form onSubmit={this.handleSubmit}>
-          <Form.Group widths="equal">
+      <div style={styles.background}>
+        <Header as="h1" style={styles.text}>New Topic</Header>
+          <Form onSubmit={this.handleSubmit}>
+          
+          <label style={{color: 'white'}}>Title</label>
             <Form.Input 
-              label="Title"
+
               name="title"
               placeholder="Title"
               value={title}
               onChange={this.handleChange}
               required
           />
+          <label style={{color: 'white'}}>Topic Date</label>
           <Form.Input
-            label="Topic Date"
+            
             name="topic_date"
             placeholder="Topic Date"
             value={topic_date}
             onChange={this.handleChange}
           />
+          <label style={{color: 'white'}}>Topic Image</label>
           <Form.Input
-            label="Topic Image"
+            
             name="topic_image"
             placeholder="Topic Image"
             value={topic_image}
             onChange={this.handleChange}
           />
-          </Form.Group>
+         
           <Form.Button color="cyan">Submit></Form.Button>
         </Form>
         <br/>
       </div>
     )
+  }
+}
+
+const styles = {
+  background: {
+    backgroundColor: "#8a2be2",
+    height: "100vh",
+  },
+  text: {
+    color: "white"
   }
 }
 
