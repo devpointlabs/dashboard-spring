@@ -28,6 +28,7 @@ const App = () => (
   <div>
   <Navbar />
   <FetchUser>
+  <div style= {{backgroundColor: "#8a2be2", padding: "70px", margin: "0px"}}> 
     <Container>
       <Switch>
         <ProtectedRoute exact path="/" component={Home} />
@@ -51,8 +52,9 @@ const App = () => (
         <Route component={NoMatch} />
       </Switch>
     </Container>
-  </FetchUser>
 </div>
+  </FetchUser>
+  </div>
 )
 
 export default App;

@@ -64,5 +64,12 @@ class Topic extends React.Component {
   }
 }
 
+const styles = {
+  background: {
+    backgroundColor: "#8a2be2",
+    height: "100vh",
+  }
+}
+
 export default Topic;
       

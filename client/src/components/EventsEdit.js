@@ -24,9 +24,7 @@ class EventsEdit extends React.Component {
     const { events } = this.state
 
     return events.map( event => (
-      <>
-     
-      
+      <div style={styles.background}>
       <Card.Group>      
         <Card>
           <Card.Content>
@@ -45,7 +43,7 @@ class EventsEdit extends React.Component {
           </Card.Content>
         </Card>
       </Card.Group>
-      </>
+      </div>
      )
    )
   }
@@ -54,6 +52,12 @@ class EventsEdit extends React.Component {
     return (
       <div>{this.renderEvents()}</div>
     )
+  }
+}
+const styles = {
+  background: {
+    backgroundColor: "#8a2be2",
+    height: "100vh",
   }
 }
 
