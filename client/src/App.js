@@ -27,30 +27,32 @@ const App = () => (
   <div>
   <Navbar />
   <FetchUser>
+  <div style= {{backgroundColor: "#8a2be2", padding: "70px", margin: "0px"}}> 
     <Container>
       <Switch>
         <ProtectedRoute exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
-        <Route exact path="/topicsform" component={TopicsForm} />
-        <Route exact path="/topicsview" component={TopicView} />
-        <Route exact path="/topics/edit" component={TopicEdit} />
-        <Route exact path="/eventsform" component={EventsForm} />
-        <Route exact path="/eventsview" component={EventsView} />
-        <Route exact path="/eventsedit" component={EventsEdit}/>
-        <Route exact path="/videoform" component={VideoForm} />
-        <Route exact path="/videoview" component={VideoView} />
-        <Route exact path="/videoedit" component={VideoEdit} />
-        <Route exact path="/imagesform" component={ImagesForm} />
-        <Route exact path="/imagesview" component={ImagesView} />
-        <Route exact path="/imagesedit" component={ImagesEdit} />
+        <ProtectedRoute exact path="/topicsform" component={TopicsForm} />
+        <ProtectedRoute exact path="/topicsview" component={TopicView} />
+        <ProtectedRoute exact path="/topics/edit" component={TopicEdit} />
+        <ProtectedRoute exact path="/eventsform" component={EventsForm} />
+        <ProtectedRoute exact path="/eventsview" component={EventsView} />
+        <ProtectedRoute exact path="/eventsedit" component={EventsEdit}/>
+        <ProtectedRoute exact path="/videoform" component={VideoForm} />
+        <ProtectedRoute exact path="/videoview" component={VideoView} />
+        <ProtectedRoute exact path="/videoedit" component={VideoEdit} />
+        <ProtectedRoute exact path="/imagesform" component={ImagesForm} />
+        <ProtectedRoute exact path="/imagesview" component={ImagesView} />
+        <ProtectedRoute exact path="/imagesedit" component={ImagesEdit} />
 
         
         <Route component={NoMatch} />
       </Switch>
     </Container>
+  </div>
   </FetchUser>
-</div>
+  </div>
 )
 
 export default App;

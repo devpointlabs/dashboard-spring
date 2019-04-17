@@ -17,23 +17,20 @@ class ImagesEdit extends React.Component {
       .then( res => {
         const { images, } = this.state;
         this.setState({ images: images.filter(image => image.id !== id), })
+        this.props.history.push("/imagesform")
       })
   }
 
   renderImages = () => {
     const { images } = this.state
-
     return images.map( image => (
-      <>
-       
+      <div style={styles.background}>
        <Card.Group>      
         <Card>
           <Card.Content>
             <Image floated='right' size='Medium' src={image.image_url} />
             <Card.Header>{ image.title }</Card.Header>
-            
             <Card.Description>
-      
             </Card.Description>
           </Card.Content>
           <Card.Content extra>
@@ -45,7 +42,7 @@ class ImagesEdit extends React.Component {
           </Card.Content>
         </Card>
       </Card.Group>
-      </>
+      </div>
      )
    )
   }
@@ -54,6 +51,13 @@ class ImagesEdit extends React.Component {
     return (
       <div>{this.renderImages()}</div>
     )
+  }
+}
+
+const styles = {
+  background: {
+    backgroundColor: "#8a2be2",
+    height: "100vh",
   }
 }
 

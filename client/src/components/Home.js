@@ -6,7 +6,7 @@ import VideoView from './VideoView'
 import ImagesView from './ImagesView'
 const Home = () => (
   <div>
-    <Container>
+    <Container style= {{}}>
 
     <Grid divided='vertically' celled padded style={GridStyle}>
       <Grid.Row overFlow='visible' columns={2} style={{height: '50%'}}>

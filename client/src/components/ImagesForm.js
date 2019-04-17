@@ -8,7 +8,6 @@ class ImagesForm extends React.Component {
 
   handleSubmit = (e) => {
       e.preventDefault();
-      debugger
       const images = { ...this.state, };
       axios.post("/api/images", images)
         .then( res => {
@@ -26,31 +25,38 @@ class ImagesForm extends React.Component {
   render() {
       const { image_url, } = this.state;
       return(
-          <>
-          <div style={{ margin:"20px", }}>
-          <Header as="h1">
+        <div style={styles.background}>
+          <Header as="h1" style={styles.text}>
               New Image
           </Header>
-          </div>
+          <label style={{color: 'white'}}>Add Image Link</label>
           <Form onSubmit={this.handleSubmit}>
-              <Form.Group widths="equal">
+              
                   <Form.Input 
                       required
                       autoFocus
-                      label='Image'
+                      
                       placeholder="URL"
                       name="image_url"
                       value={image_url}
                       onChange={this.handleChange}
                   />
-              </Form.Group>
+              
               <Button type="submit">Submit</Button>
           </Form>
-          </>
+          </div>
       )
   }
 }
 
-
+const styles = {
+  background: {
+    backgroundColor: "#8a2be2",
+    height: "100vh",
+  },
+  text: {
+    color: "white"
+  }
+}
 
 export default ImagesForm

@@ -13,7 +13,7 @@ class Images extends React.Component {
  
   render() {
     return (
-      <>
+      <div style={styles.background}>
         <div style={{display: "flex", flexWrap: "wrap"}}>
           {this.state.images.map(i=> 
             <div key={this.state.images.id} style={{margin: "20px", zIndex: "2", textAlign: "Center"}}> 
@@ -27,10 +27,16 @@ class Images extends React.Component {
               </Link>
               </div>)}
         </div>
-      </>
+      </div>
     )
   }
+}
 
+const styles = {
+  background: {
+    backgroundColor: "#8a2be2",
+    height: "100vh",
+  }
 }
 
 export default Images

@@ -17,18 +17,18 @@ class VideoEdit extends React.Component {
       .then( res => {
         const { videos, } = this.state;
         this.setState({ videos: videos.filter(video => video.id !== id), })
+        this.props.history.push("/videosform")
       })
   }
 
   renderVideos = () => {
     const { videos } = this.state
-
     return videos.map( video => (
-      <>
+      <div style={styles.background}>
        <Card.Group>      
         <Card>
           <Card.Content>
-            <Image floated='right' size='mini' src='' />
+            <Image floated='right' size='Medium' src={video.video_url} />
             <Card.Header>{ video.title }</Card.Header>
             <Card.Description>
             <iframe title='myframe' src={video.video_url}
@@ -46,7 +46,7 @@ class VideoEdit extends React.Component {
           </Card.Content>
         </Card>
       </Card.Group>
-      </>
+      </div>
      )
    )
   }
@@ -55,6 +55,13 @@ class VideoEdit extends React.Component {
     return (
       <div>{this.renderVideos()}</div>
     )
+  }
+}
+
+const styles = {
+  background: {
+    backgroundColor: "#8a2be2",
+    height: "100vh",
   }
 }
 
