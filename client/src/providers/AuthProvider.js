@@ -15,7 +15,7 @@ export class AuthProvider extends React.Component {
         history.push("/");
       })
     .catch( res => {
-      console.log(res);
+      alert("Please Double Check.\nSomething's not right")
     })
   }
   
@@ -26,7 +26,7 @@ export class AuthProvider extends React.Component {
         history.push("/");
       })
       .catch( res => {
-        console.log(res);
+        alert("Wrong Login\nPlease Try Again")  
       })
   }
   
@@ -37,7 +37,8 @@ export class AuthProvider extends React.Component {
         history.push('/login');
       })
       .catch( res => {
-        console.log(res);
+        alert("You Are Still Logged In.\nTry again!")
+
       })
   }
   
