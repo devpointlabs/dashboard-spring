@@ -18,7 +18,7 @@ class ImagesView extends React.Component {
     case 1 :
     return images.map( images => (
       <>
-       <div style={{display: "flex", flexWrap: "wrap"}}>
+       <div style={{display: "flex", flexWrap: "wrap", }}>
          {this.state.images.map(i=>
            <div key={this.state.images.id} style={{ zIndex: "0", textAlign: "Center"}}>
              <Link to={`/image/${i.id}`}>
