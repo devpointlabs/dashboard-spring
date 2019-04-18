@@ -50,8 +50,12 @@ class TopicView extends React.Component {
     
   render() {
     return (
-      <div overflow='visible' textAlign='center'>
+
+      <div overflow='visible'>
+        <Link to="/addedit">
+
         <Header as='h1' textAlign='center'>Today's Lecture Topic:</Header>
+        </Link>
         <Header as='h4' textAlign='center'>University of Utah Full-Time Web Development</Header>
         <Header textAlign='center'>
 

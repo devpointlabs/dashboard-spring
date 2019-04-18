@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import { Image, Button, Card } from 'semantic-ui-react'
+import { Image, Button, Container } from 'semantic-ui-react'
 
 class VideoEdit extends React.Component {
   state = { videos: [], };
@@ -17,36 +17,26 @@ class VideoEdit extends React.Component {
       .then( res => {
         const { videos, } = this.state;
         this.setState({ videos: videos.filter(video => video.id !== id), })
-        this.props.history.push("/videosform")
+        this.props.history.push("/videoview")
       })
   }
 
   renderVideos = () => {
     const { videos } = this.state
     return videos.map( video => (
-      <div style={styles.background}>
-       <Card.Group>      
-        <Card>
-          <Card.Content>
-            <Image floated='right' size='Medium' src={video.video_url} />
-            <Card.Header>{ video.title }</Card.Header>
-            <Card.Description>
+      <>
+        <Container>
+
             <iframe title='myframe' src={video.video_url}
                 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
               </iframe>
-            </Card.Description>
-          </Card.Content>
-          <Card.Content extra>
-            <div className='ui two buttons'>
-              <Button basic color='red' onClick={ () => this.deleteVideo(video.id) }>
+              <br/>
+              <Button  color='red' onClick={ () => this.deleteVideo(video.id) }>
                 Delete
               </Button>
-            </div>
-          </Card.Content>
-        </Card>
-      </Card.Group>
-      </div>
+        </Container>
+      </>
      )
    )
   }
@@ -67,5 +57,7 @@ const styles = {
 
 export default VideoEdit
        
+      
+     
             
        
