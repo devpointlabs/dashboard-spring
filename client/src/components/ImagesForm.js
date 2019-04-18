@@ -1,6 +1,7 @@
 import React from "react"
 import axios from "axios"
 import { Button, Form, Header, } from 'semantic-ui-react';
+import {Link} from 'react-router-dom'
 
 class ImagesForm extends React.Component {
   state = { images: [], };
@@ -43,6 +44,11 @@ class ImagesForm extends React.Component {
                   />
               
               <Button type="submit">Submit</Button>
+              <Link to='/addedit'>
+                  <Button  color='white'>
+                    Back
+                 </Button>
+              </Link>
           </Form>
           </div>
       )
