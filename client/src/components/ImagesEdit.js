@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { Card, Image, Button } from 'semantic-ui-react'
+import {Link} from 'react-router-dom'
 
 class ImagesEdit extends React.Component {
   state = { images: [], };
@@ -38,6 +39,11 @@ class ImagesEdit extends React.Component {
               <Button basic color='red' onClick={ () => this.deleteImages(image.id) }>
                 Delete
               </Button>
+              <Link to='/addedit'>
+                  <Button  basic color='purple'>
+                    Back
+                 </Button>
+                </Link>
             </div>
           </Card.Content>
         </Card>

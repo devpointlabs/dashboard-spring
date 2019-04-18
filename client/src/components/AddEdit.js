@@ -53,7 +53,7 @@ class AddEdit extends React.Component {
               <Card.Content extra>
                 <div >
                   <Link to='/'>
-                  <Button basic color='green'>
+                  <Button basic color='purple'>
                     To Dash
                   </Button>
                   </Link>
@@ -68,7 +68,7 @@ class AddEdit extends React.Component {
               <Card.Content extra>
                 <div >
                   <Link to='/topicsform'>
-                  <Button basic color='green'>
+                  <Button basic color='purple'>
                     Add Form
                   </Button>
                   </Link>
@@ -83,7 +83,7 @@ class AddEdit extends React.Component {
               <Card.Content extra>
                 <div >
                   <Link to='/topics/edit'>
-                  <Button basic color='green'>
+                  <Button basic color='purple'>
                     Delete Topic
                   </Button>
                   </Link>
@@ -97,7 +97,7 @@ class AddEdit extends React.Component {
               <Card.Content extra>
                 <div >
                   <Link to='/videoform'>
-                  <Button basic color='green'>
+                  <Button basic color='purple'>
                     Add Video
                   </Button>
                   </Link>
@@ -112,7 +112,7 @@ class AddEdit extends React.Component {
               <Card.Content extra>
                 <div >
                   <Link to='/videoedit'>
-                  <Button basic color='green'>
+                  <Button basic color='purple'>
                     Delete Video
                   </Button>
                   </Link>
@@ -127,7 +127,7 @@ class AddEdit extends React.Component {
               <Card.Content extra>
                 <div >
                   <Link to='/imagesform'>
-                  <Button basic color='green'>
+                  <Button basic color='purple'>
                     Add Image
                   </Button>
                   </Link>
@@ -142,7 +142,7 @@ class AddEdit extends React.Component {
               <Card.Content extra>
                 <div >
                   <Link to='/imagesedit'>
-                  <Button basic color='green'>
+                  <Button basic color='purple'>
                     Delete Image
                   </Button>
                   </Link>
@@ -157,7 +157,7 @@ class AddEdit extends React.Component {
               <Card.Content extra>
                 <div >
                   <Link to='/eventsform'>
-                  <Button basic color='green'>
+                  <Button basic color='purple'>
                     Add Event
                   </Button>
                   </Link>
@@ -172,7 +172,7 @@ class AddEdit extends React.Component {
               <Card.Content extra>
                 <div >
                   <Link to='/eventsedit'>
-                  <Button basic color='green'>
+                  <Button basic color='purple'>
                     Delete Event
                   </Button>
                   </Link>

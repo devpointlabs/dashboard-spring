@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { Image, Button, Container } from 'semantic-ui-react'
+import {Link} from 'react-router-dom'
 
 class VideoEdit extends React.Component {
   state = { videos: [], };
@@ -35,6 +36,11 @@ class VideoEdit extends React.Component {
               <Button  color='red' onClick={ () => this.deleteVideo(video.id) }>
                 Delete
               </Button>
+              <Link to='/addedit'>
+                  <Button  color='white'>
+                    Back
+                  </Button>
+              </Link>
         </Container>
       </>
      )
