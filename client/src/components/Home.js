@@ -7,6 +7,7 @@ import ImagesView from './ImagesView'
 const Home = () => (
   
   <div>
+  
     <Container style= {{}}>
     
     <Grid divided='vertically' celled padded style={GridStyle}>
