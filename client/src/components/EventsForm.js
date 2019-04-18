@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Header, Button} from "semantic-ui-react";
+import { Form, Header, Button, Container} from "semantic-ui-react";
 import axios from "axios";
 import {Link} from 'react-router-dom'
 
@@ -26,7 +26,7 @@ class EventsForm extends React.Component {
     const { title, start_time, end_time, } = this.state;
 
     return (
-      <div style={styles.background}>
+      <Container style={styles.background}>
         <Header as="h1" style={styles.text}>New Event</Header>
         <Form onSubmit={this.handleSubmit}>
         <label style={{color: 'white'}}>Title</label>
@@ -62,7 +62,7 @@ class EventsForm extends React.Component {
                  </Button>
           </Link>
         </Form>
-      </div>
+      </Container>
     )
   }
 }
@@ -71,6 +71,7 @@ const styles = {
   background: {
     backgroundColor: "#6E54A3",
     height: "100vh",
+    width: "100vh"
   },
   text: {
     color: "white"
