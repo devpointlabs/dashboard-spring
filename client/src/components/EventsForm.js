@@ -1,6 +1,7 @@
 import React from 'react';
-import { Form, Header, } from "semantic-ui-react";
+import { Form, Header, Button} from "semantic-ui-react";
 import axios from "axios";
+import {Link} from 'react-router-dom'
 
 class EventsForm extends React.Component {
   defaultValues = { title: "", start_time: "", end_time: "", };
@@ -55,6 +56,11 @@ class EventsForm extends React.Component {
             onChange={this.handleChange}
           />
           <Form.Button color="cyan">Submit></Form.Button>
+          <Link to='/addedit'>
+                  <Button  color='white'>
+                    Back
+                 </Button>
+          </Link>
         </Form>
       </div>
     )
