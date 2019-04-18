@@ -20,14 +20,16 @@ import ImagesView from './components/ImagesView'
 import ImagesEdit from './components/ImagesEdit'
 import ImagesForm from './components/ImagesForm'
 import EventsEdit from './components/EventsEdit'
+import AddEdit from './components/AddEdit'
 
 
 
 const App = () => (
+  
   <div>
-  <Navbar />
+  {/* <Navbar /> */}
   <FetchUser>
-  <div style= {{backgroundColor: "#8a2be2", padding: "70px", margin: "0px"}}> 
+  <div style= {{backgroundColor: "#6E54A3", padding: "70px", margin: "0px"}}> 
     <Container>
       <Switch>
         <ProtectedRoute exact path="/" component={Home} />
@@ -45,6 +47,9 @@ const App = () => (
         <ProtectedRoute exact path="/imagesform" component={ImagesForm} />
         <ProtectedRoute exact path="/imagesview" component={ImagesView} />
         <ProtectedRoute exact path="/imagesedit" component={ImagesEdit} />
+        <ProtectedRoute exact path="/addedit" component={AddEdit} />
+
+
 
         
         <Route component={NoMatch} />
@@ -52,7 +57,7 @@ const App = () => (
     </Container>
   </div>
   </FetchUser>
-  </div>
+</div>
 )
 
 export default App;

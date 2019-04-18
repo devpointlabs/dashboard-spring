@@ -1,6 +1,7 @@
 import React from 'react';
 import { AuthConsumer, } from "../providers/AuthProvider";
-import { Button, Form, Segment, Header, } from 'semantic-ui-react';
+import { Button, Form, Segment, Header } from 'semantic-ui-react';
+import { Link } from 'react-router-dom'
 
 class Register extends React.Component {
   state = { email: '', password: '', passwordConfirmation: '', };
@@ -26,46 +27,45 @@ class Register extends React.Component {
     
     return (
       <div style={styles.background}>
-      <Segment basic>
-        <Header as='h1' textAlign='center' style={styles.text}>Register</Header>
-        <Form onSubmit={this.handleSubmit}>
-        <label style={{color: 'white'}}>Email</label>
-          <Form.Input
-            
-            required
-            autoFocus
-            name='email'
-            value={email}
-            placeholder='Email'
-            onChange={this.handleChange}
-          />
-          <label style={{color: 'white'}}>Password</label>
-          <Form.Input
-           
-            required
-            name='password'
-            value={password}
-            placeholder='Password'
-            type='password'
-            onChange={this.handleChange}
-          />
-          
-          <label style={{color: 'white'}}>Password Confirmation</label>
-          <Form.Input
-            
-            required
-            name='passwordConfirmation'
-            value={passwordConfirmation}
-            placeholder='Password Confirmation'
-            type='password'
-            onChange={this.handleChange}
-          />
-          
-          <Segment textAlign='center' basic>
-            <Button primary type='submit'>Submit</Button>
-          </Segment>
-        </Form>
-      </Segment>
+        <Segment basic>
+          <Header as='h1' textAlign='center' style={styles.text}>Register</Header>
+          <Form onSubmit={this.handleSubmit}>
+            <label style={{color: 'white'}}>Email</label>
+              <Form.Input
+                required
+                autoFocus
+                name='email'
+                value={email}
+                placeholder='Email'
+                onChange={this.handleChange}
+              />
+            <label style={{color: 'white'}}>Password</label>
+              <Form.Input
+                required
+                name='password'
+                value={password}
+                placeholder='Password'
+                type='password'
+                onChange={this.handleChange}
+              />
+            <label style={{color: 'white'}}>Password Confirmation</label>
+              <Form.Input
+                required
+                name='passwordConfirmation'
+                value={passwordConfirmation}
+                placeholder='Password Confirmation'
+                type='password'
+                onChange={this.handleChange}
+              />
+              <Segment textAlign='center' basic>
+                <Button primary type='submit'>Submit</Button>
+              </Segment>
+              <Segment textAlign='center' basic>
+                <Button  primary  value='{/login}' as={Link} to="/login"> Login
+                </Button>
+              </Segment>
+          </Form>
+        </Segment>
       </div>
     )
   }
@@ -73,7 +73,7 @@ class Register extends React.Component {
 
 const styles = {
   background: {
-    backgroundColor: "#8a2be2",
+    backgroundColor: "#6E54A3",
     height: "100vh",
   },
   text: {
