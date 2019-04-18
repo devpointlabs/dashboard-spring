@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import './VideoView.css';
 
 class VideoView extends React.Component {
   state = { video: [] }
@@ -18,19 +19,18 @@ class VideoView extends React.Component {
       case 1 :
       return video.map( video => (
         <>
-        <div style={{display: "flex", flexWrap: "wrap"}}>
-        {this.state.video.map(v=> 
-          <div key={this.state.video.id} style={{margin: "20px", zIndex: "2", textAlign: "Center"}}> 
-            <Link to={`/video/${v.id}`}>    
-            <div>
-              <iframe title='myframe'width="200%" height="350px" src={v.video_url}
-                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-              </iframe>
-            </div>
-            </Link>
-            </div>)}
-      </div>
+       <div>
+         {this.state.video.map(v=>
+           <div key={this.state.video.id} style={{ zIndex: "0", textAlign: "Center"}}>
+             <Link to={`/video/${v.id}`}>
+             <div class="resp-container">
+               <iframe class="resp-iframe" title='myframe' src={v.video_url}
+                 allowfullscreen>
+               </iframe>
+             </div>
+             </Link>
+             </div>)}
+       </div>
       </>
       )
     )
