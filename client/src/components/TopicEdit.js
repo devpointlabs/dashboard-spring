@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import { Image, Button, Card, Form, Header } from 'semantic-ui-react'
+import { Image, Button, Card, Form, Header, Container } from 'semantic-ui-react'
 import { Link, } from 'react-router-dom'
 
 class TopicEdit extends React.Component {
@@ -73,7 +73,8 @@ class TopicEdit extends React.Component {
     const { topics } = this.state
     return topics.map( topic => (
       <>
-      
+      <Container style={styles.background}>
+
       <Card.Group>      
         <Card>
           <Card.Content>
@@ -98,6 +99,7 @@ class TopicEdit extends React.Component {
           </Card.Content>
         </Card>
       </Card.Group>
+      </Container>
       </>
      )
    )

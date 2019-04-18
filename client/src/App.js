@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 import Login from './components/Login';
 import Register from './components/Register';
 import { Switch, Route, } from 'react-router-dom';
-import { Container, } from "semantic-ui-react";
+
 import EventsForm from './components/EventsForm';
 import EventsView from './components/EventsView';
 import FetchUser from './components/FetchUser'
@@ -26,10 +26,10 @@ import AddEdit from './components/AddEdit'
 
 const App = () => (
   
-  <div>
+  <div style={{height:"100vh", background:"#6E54A3"}}>
   {/* <Navbar /> */}
   <FetchUser>
-  <div style= {{backgroundColor: "#6E54A3", padding: "70px", margin: "0px"}}> 
+  <div > 
     
       <Switch>
         <ProtectedRoute exact path="/" component={Home} />
@@ -54,7 +54,7 @@ const App = () => (
         
         <Route component={NoMatch} />
       </Switch>
-   
+    
   </div>
   </FetchUser>
 </div>
