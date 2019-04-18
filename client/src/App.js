@@ -30,7 +30,7 @@ const App = () => (
   {/* <Navbar /> */}
   <FetchUser>
   <div style= {{backgroundColor: "#6E54A3", padding: "70px", margin: "0px"}}> 
-    <Container>
+    
       <Switch>
         <ProtectedRoute exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
@@ -54,7 +54,7 @@ const App = () => (
         
         <Route component={NoMatch} />
       </Switch>
-    </Container>
+   
   </div>
   </FetchUser>
 </div>
