@@ -23,7 +23,7 @@ class VideoView extends React.Component {
           <div key={this.state.video.id} style={{margin: "20px", zIndex: "2", textAlign: "Center"}}> 
             <Link to={`/video/${v.id}`}>    
             <div>
-              <iframe title='myframe'width="160%" height="440px" src={v.video_url}
+              <iframe title='myframe'width="220%" height="400px" src={v.video_url}
                 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
               </iframe>

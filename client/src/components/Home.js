@@ -7,7 +7,6 @@ import ImagesView from './ImagesView'
 const Home = () => (
   
   <div>
-    <Container style= {{}}>
     
     <Grid divided='vertically' celled padded style={GridStyle}>
       <Grid.Row overFlow='visible' columns={2} style={{height: '50%'}}>
@@ -30,7 +29,7 @@ const Home = () => (
           
         </Grid.Row>
     </Grid>
-    </Container>
+    
     
   </div>
  
