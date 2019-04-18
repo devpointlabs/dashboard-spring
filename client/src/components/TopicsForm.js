@@ -1,6 +1,7 @@
 import React from 'react';
-import { Form, Header, Input} from "semantic-ui-react";
+import { Form, Header, Button, Input} from "semantic-ui-react";
 import axios from "axios"
+import {Link} from 'react-router-dom'
 
 
 
@@ -56,6 +57,11 @@ class TopicsForm extends React.Component {
             onChange={this.handleChange}
           />
           <Form.Button color="cyan">Submit></Form.Button>
+          <Link to='/addedit'>
+                  <Button  color='white'>
+                    Back
+                 </Button>
+          </Link>
         </Form>
         <br/>
       </div>

@@ -1,6 +1,7 @@
 import React from "react"
 import axios from "axios"
 import { Button, Form, Header, Input } from 'semantic-ui-react';
+import {Link} from 'react-router-dom'
 
 class VideoForm extends React.Component {
     state = { videos: [], };
@@ -50,6 +51,11 @@ class VideoForm extends React.Component {
                     />
                 
                 <Button type="submit">Submit</Button>
+                <Link to='/addedit'>
+                  <Button  color='white'>
+                    Back
+                 </Button>
+                 </Link>
             </Form>
             </div>
         )
