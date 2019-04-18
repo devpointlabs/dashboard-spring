@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Header, Button, Input} from "semantic-ui-react";
+import { Form, Header, Button, Container} from "semantic-ui-react";
 import axios from "axios"
 import {Link} from 'react-router-dom'
 
@@ -27,7 +27,7 @@ class TopicsForm extends React.Component {
   render () {
     const { title, topic_date, topic_image } = this.state;
     return (
-      <div style={styles.background}>
+      <Container style={styles.background}>
         <Header as="h1" style={styles.text}>New Topic</Header>
           <Form onSubmit={this.handleSubmit}>
           
@@ -39,14 +39,6 @@ class TopicsForm extends React.Component {
               value={title}
               onChange={this.handleChange}
               required
-          />
-          <label style={{color: 'white'}}>Topic Date</label>
-          <Form.Input
-            
-            name="topic_date"
-            placeholder="Topic Date"
-            value={topic_date}
-            onChange={this.handleChange}
           />
           <label style={{color: 'white'}}>Topic Image</label>
           <Form.Input
@@ -64,7 +56,7 @@ class TopicsForm extends React.Component {
           </Link>
         </Form>
         <br/>
-      </div>
+      </Container>
     )
   }
 }
@@ -73,6 +65,7 @@ const styles = {
   background: {
     backgroundColor: "#6E54A3",
     height: "100vh",
+    width: '100vh'
   },
   text: {
     color: "white"

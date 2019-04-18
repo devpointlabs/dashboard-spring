@@ -1,6 +1,6 @@
 import React from "react"
 import axios from "axios"
-import { Button, Form, Header, Input } from 'semantic-ui-react';
+import { Button, Form, Header, Container } from 'semantic-ui-react';
 import {Link} from 'react-router-dom'
 
 class VideoForm extends React.Component {
@@ -33,7 +33,7 @@ class VideoForm extends React.Component {
     render() {
         const { video_url, } = this.state;
         return(
-            <div style={styles.background}>
+            <Container style={styles.background}>
             <Header as="h1" style={styles.text}>
             New Video
             </Header>
@@ -57,7 +57,7 @@ class VideoForm extends React.Component {
                  </Button>
                  </Link>
             </Form>
-            </div>
+            </Container>
         )
     }
 }
@@ -66,6 +66,7 @@ const styles = {
   background: {
     backgroundColor: "#6E54A3",
     height: "100vh",
+    width: '100vh',
   },
   text: {
     color: "white"
