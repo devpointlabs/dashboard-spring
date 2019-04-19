@@ -12,7 +12,7 @@ class ImagesForm extends React.Component {
       const images = { ...this.state, };
       axios.post("/api/images", images)
         .then( res => {
-          this.props.history.push("/imagesview");
+          this.props.history.push("/imagesedit");
         })
     }
   

@@ -51,7 +51,7 @@ class TopicsForm extends React.Component {
           <Form.Button color="cyan">Submit</Form.Button>
           <Link to='/addedit'>
             <Button  color='white'>
-                    Back
+            Control panel
             </Button>
           </Link>
         </Form>

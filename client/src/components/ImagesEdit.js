@@ -18,7 +18,7 @@ class ImagesEdit extends React.Component {
       .then( res => {
         const { images, } = this.state;
         this.setState({ images: images.filter(image => image.id !== id), })
-        this.props.history.push("/imagesform")
+        this.props.history.push("/imagesedit")
       })
   }
 
@@ -55,7 +55,12 @@ class ImagesEdit extends React.Component {
 
   render () {
     return (
-      <div>{this.renderImages()}</div>
+      <div>{this.renderImages()}
+      <Link to='/addedit'>
+                  <Button  basic color='white'>
+                    Control panel
+                 </Button>
+                </Link></div>
     )
   }
 }

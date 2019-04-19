@@ -1,6 +1,6 @@
 import React from 'react'
 import { AuthConsumer, } from "../providers/AuthProvider";
-import { Menu, Card, Button } from 'semantic-ui-react'
+import { Menu, Card, Button, Modal, Image, Header } from 'semantic-ui-react'
 import { Link, withRouter, } from 'react-router-dom'
 
 class AddEdit extends React.Component {
@@ -43,6 +43,7 @@ class AddEdit extends React.Component {
   render() {
     return (
       <div>
+
           <Button>{ this.rightNavItems() }</Button>
           <Card.Group>
 
