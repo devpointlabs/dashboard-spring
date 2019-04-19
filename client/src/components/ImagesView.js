@@ -2,6 +2,8 @@ import React from 'react';
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import './ImagesView.css';
+import { Image } from 'semantic-ui-react'
+
 
 class ImagesView extends React.Component {
  state = { images: [] }
@@ -23,10 +25,8 @@ class ImagesView extends React.Component {
          {this.state.images.map(i=>
            <div key={this.state.images.id} style={{ zIndex: "0", textAlign: "Center"}}>
              <Link to={`/image/${i.id}`}>
-             <div class="resp-container">
-               <iframe class="resp-iframe" title='myframe' src={i.image_url}
-                 allowfullscreen>
-               </iframe>
+             <div >
+             <Image class='resp-iframe'src={i.image_url} />
              </div>
              </Link>
              </div>)}
