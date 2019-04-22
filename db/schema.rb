@@ -75,8 +75,6 @@ ActiveRecord::Schema.define(version: 2019_04_22_202300) do
     t.text "video_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "title"
-    t.string "description"
   end
 
 end

@@ -5,7 +5,6 @@ import Navbar from './components/Navbar';
 import Login from './components/Login';
 import Register from './components/Register';
 import { Switch, Route, } from 'react-router-dom';
-
 import EventsForm from './components/EventsForm';
 import EventsView from './components/EventsView';
 import FetchUser from './components/FetchUser'
@@ -21,6 +20,7 @@ import ImagesEdit from './components/ImagesEdit'
 import ImagesForm from './components/ImagesForm'
 import EventsEdit from './components/EventsEdit'
 import AddEdit from './components/AddEdit'
+
 
 
 
