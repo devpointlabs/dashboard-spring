@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
-import { Image, Button, Container } from 'semantic-ui-react'
-import {Link} from 'react-router-dom'
+import {Button, Container, Image} from 'semantic-ui-react'
+import {Link, withRouter} from 'react-router-dom'
 
 class VideoEdit extends React.Component {
   state = { videos: [], };
@@ -18,7 +18,7 @@ class VideoEdit extends React.Component {
       .then( res => {
         const { videos, } = this.state;
         this.setState({ videos: videos.filter(video => video.id !== id), })
-        this.props.history.push("/videoedit")
+        this.props.history.push("/addedit")
       })
   }
 
@@ -26,6 +26,7 @@ class VideoEdit extends React.Component {
     const { videos } = this.state
     return videos.map( video => (
       <>
+         
         <Container>
 
             <iframe title='myframe' src={video.video_url}
@@ -44,10 +45,18 @@ class VideoEdit extends React.Component {
 
   render () {
     return (
+
+      <>
+      <Link to='/'>
+         
+         <Image  src='https://s3.invisionapp-cdn.com/storage.invisionapp.com/boards/files/169539145.png?x-amz-meta-iv=1&x-amz-meta-ck=5a81039525e5126ffd527a9f9f49b565&AWSAccessKeyId=AKIAJFUMDU3L6GTLUDYA&Expires=1559347200&Signature=Dc%2F8OCYmDaB%2Bnuiii%2BJQjcKHheo%3D' />
+      
+         </Link>
       <div>{this.renderVideos()}
 
       
       </div>
+      </>
     )
   }
 }
@@ -60,7 +69,7 @@ const styles = {
   }
 }
 
-export default VideoEdit
+export default withRouter(VideoEdit)
        
       
      

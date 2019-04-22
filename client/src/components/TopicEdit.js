@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { Image, Button, Card, Form, Header, Container } from 'semantic-ui-react'
-import { Link, } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 
 class TopicEdit extends React.Component {
   state = { topics: [], editing: false, };
@@ -35,6 +35,7 @@ class TopicEdit extends React.Component {
     return (
       <div>
         <Header as="h1">Edit Topic</Header>
+       
         <Form onSubmit={this.handleSubmit}>
           <Form.Group widths="equal">
             <Form.Input 
@@ -74,7 +75,11 @@ class TopicEdit extends React.Component {
     return topics.map( topic => (
       <>
       
-
+      <Link to='/'>
+         
+         <Image  src='https://s3.invisionapp-cdn.com/storage.invisionapp.com/boards/files/169539145.png?x-amz-meta-iv=1&x-amz-meta-ck=5a81039525e5126ffd527a9f9f49b565&AWSAccessKeyId=AKIAJFUMDU3L6GTLUDYA&Expires=1559347200&Signature=Dc%2F8OCYmDaB%2Bnuiii%2BJQjcKHheo%3D' />
+      
+         </Link>
       <Card.Group>      
         <Card>
           <Card.Content>

@@ -109,7 +109,6 @@ class EventsView extends React.Component {
   render() {
     return (
       <div overflow='visible'>
-        
         <div as='h1' textAlign='center'>{ this.renderTopics() }</div>
       </div>
     )
