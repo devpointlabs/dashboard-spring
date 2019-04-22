@@ -4,7 +4,7 @@ import axios from "axios";
 import {Link} from 'react-router-dom'
 
 class EventsForm extends React.Component {
-  defaultValues = { title: "", start_time: "", end_time: "", };
+  defaultValues = { title: "", date: "", time: "", season: "", year: "" };
   state = { ...this.defaultValues, };
 
   handleSubmit = (e) => {
@@ -23,13 +23,13 @@ class EventsForm extends React.Component {
   }
 
   render () {
-    const { title, start_time, end_time, } = this.state;
+    const { title, date, time, season, year } = this.state;
 
     return (
       <Container style={styles.background}>
         <Header as="h1" style={styles.text}>New Event</Header>
         <Form onSubmit={this.handleSubmit}>
-        <label style={{color: 'white'}}>Title</label>
+          <label style={{color: 'white'}}>Title</label>
             <Form.Input 
              
               name="title"
@@ -39,20 +39,20 @@ class EventsForm extends React.Component {
               onChange={this.handleChange}
               required
           />
-          <label style={{color: 'white'}}>Start Time</label>
+          <label style={{color: 'white'}}>Date</label>
           <Form.Input
            
-            name="start_time"
-            placeholder="Start Time"
-            value={start_time}
+            name="date"
+            placeholder="DD/MM/YYYY"
+            value={date}
             onChange={this.handleChange}
           />
-          <label style={{color: 'white'}}>End Time</label>
+          <label style={{color: 'white'}}>Time</label>
           <Form.Input
            
-            name="end_time"
-            placeholder="End Time"
-            value={end_time}
+            name="time"
+            placeholder="Start Time - End Time"
+            value={time}
             onChange={this.handleChange}
           />
           <Form.Button color="cyan">Submit</Form.Button>
