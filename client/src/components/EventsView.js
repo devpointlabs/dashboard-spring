@@ -32,8 +32,8 @@ class EventsView extends React.Component {
           <Table.Row>
             <Table.Cell>
             <Header>{event.title}</Header>
-            <Header.Subheader>{event.start_time}</Header.Subheader>
-            <Header.Subheader>{event.end_time}</Header.Subheader>
+            <Header.Subheader>{event.date}</Header.Subheader>
+            <Header.Subheader>{event.time}</Header.Subheader>
             </Table.Cell>
           </Table.Row>
         </Table.Body>
@@ -55,8 +55,8 @@ class EventsView extends React.Component {
             <Table.Row>
               <Table.Cell>
               <Header>{event.title}</Header>
-              <Header.Subheader>{event.start_time}</Header.Subheader>
-              <Header.Subheader>{event.end_time}</Header.Subheader>
+              <Header.Subheader>{event.date}</Header.Subheader>
+              <Header.Subheader>{event.time}</Header.Subheader>
               </Table.Cell>
             </Table.Row>
           </Table.Body>
@@ -78,8 +78,8 @@ class EventsView extends React.Component {
           <Table.Row>
             <Table.Cell>
             <Header>{event.title}</Header>
-            <Header.Subheader>{event.start_time}</Header.Subheader>
-            <Header.Subheader>{event.end_time}</Header.Subheader>
+            <Header.Subheader>{event.date}</Header.Subheader>
+            <Header.Subheader>{event.time}</Header.Subheader>
             </Table.Cell>
           </Table.Row>
         </Table.Body>
