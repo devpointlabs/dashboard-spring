@@ -89,12 +89,6 @@ class TopicEdit extends React.Component {
               <Button basic color='red' onClick={ () => this.deleteTopic(topic.id) }>
                 Delete
               </Button>
-              <Link to='/addedit'>
-                  <Button  basic color='purple'>
-                    Back
-                 </Button>
-              </Link>
-              
             </div>
           </Card.Content>
         </Card>

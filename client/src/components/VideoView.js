@@ -23,7 +23,7 @@ class VideoView extends React.Component {
          {this.state.video.map(v=>
            <div key={this.state.video.id} style={{ zIndex: "0", textAlign: "Center"}}>
              <Link to={`/video/${v.id}`}>
-             <div >
+             <div>
                <iframe class="resp-iframe" title='myframe' src={v.video_url}
                  allowfullscreen>
                </iframe>

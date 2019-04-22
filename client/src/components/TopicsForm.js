@@ -49,11 +49,6 @@ class TopicsForm extends React.Component {
             onChange={this.handleChange}
           />
           <Form.Button color="cyan">Submit</Form.Button>
-          <Link to='/addedit'>
-            <Button  color='white'>
-            Control panel
-            </Button>
-          </Link>
         </Form>
         <br/>
       </Container>

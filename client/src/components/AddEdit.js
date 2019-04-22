@@ -2,6 +2,14 @@ import React from 'react'
 import { AuthConsumer, } from "../providers/AuthProvider";
 import { Menu, Card, Button, Modal, Image, Header, Container } from 'semantic-ui-react'
 import { Link, withRouter, } from 'react-router-dom'
+import EventsEdit from './EventsEdit'
+import EventsForm from './EventsForm'
+import ImagesEdit from './ImagesEdit'
+import ImagesForm from './ImagesForm'
+import VideoEdit from './VideoEdit'
+import VidoeForm from './VideoForm'
+import TopicEdit from './TopicEdit'
+import TopicsForm from './TopicsForm'
 
 class AddEdit extends React.Component {
   
@@ -11,8 +19,7 @@ class AddEdit extends React.Component {
     if (user) {
       return (
         <div position='right'>
-          <Button
-            name='logout'
+          <Button color='white'
             onClick={ () => handleLogout(this.props.history) }
           > Logout
           </Button>
@@ -42,15 +49,21 @@ class AddEdit extends React.Component {
   
   render() {
     return (
+      <>
+         <Link to='/'>
+         
+         <Image  src='https://s3.invisionapp-cdn.com/storage.invisionapp.com/boards/files/169539145.png?x-amz-meta-iv=1&x-amz-meta-ck=5a81039525e5126ffd527a9f9f49b565&AWSAccessKeyId=AKIAJFUMDU3L6GTLUDYA&Expires=1559347200&Signature=Dc%2F8OCYmDaB%2Bnuiii%2BJQjcKHheo%3D' />
+      
+         </Link>
+          <div>{ this.rightNavItems() }</div>
       <Container>
 
-          <Button>{ this.rightNavItems() }</Button>
+
           <br/>
           <br/>
 
 
              <Card>
-             <Image src='https://s3.invisionapp-cdn.com/storage.invisionapp.com/boards/files/141264491.png?x-amz-meta-iv=1&x-amz-meta-ck=5a81039525e5126ffd527a9f9f49b565&AWSAccessKeyId=AKIAJFUMDU3L6GTLUDYA&Expires=1559347200&Signature=GsqlvlhYAqK2NGW3fSA4FqSMWEQ%3D' />
               <Card.Content>
                 <Card.Header>Dashboard</Card.Header>
               </Card.Content>
@@ -71,13 +84,12 @@ class AddEdit extends React.Component {
                 <Card.Header>Add Topics</Card.Header>
               </Card.Content>
               <Card.Content extra>
-                <div >
-                  <Link to='/topicsform'>
-                  <Button basic color='purple'>
-                    Add Form
-                  </Button>
-                  </Link>
-                </div>
+              <Modal trigger={<Button basic color='purple'>Add Topic</Button>}>
+                <Modal.Header>Add Topic</Modal.Header>
+                 <Modal.Content>
+                  <TopicsForm/>
+                 </Modal.Content>
+              </Modal>
               </Card.Content>
             </Card>
 
@@ -86,13 +98,12 @@ class AddEdit extends React.Component {
                 <Card.Header>Delete Topic</Card.Header>
               </Card.Content>
               <Card.Content extra>
-                <div >
-                  <Link to='/topics/edit'>
-                  <Button basic color='purple'>
-                    Delete Topic
-                  </Button>
-                  </Link>
-                </div>
+              <Modal trigger={<Button basic color='purple'>Delete Topic</Button>}>
+                <Modal.Header>Select a topic to delete.</Modal.Header>
+                 <Modal.Content>
+                  <TopicEdit/>
+                 </Modal.Content>
+              </Modal>
               </Card.Content>
             </Card>
           </Card.Group>
@@ -102,13 +113,12 @@ class AddEdit extends React.Component {
                 <Card.Header>Add Video</Card.Header>
               </Card.Content>
               <Card.Content extra>
-                <div >
-                  <Link to='/videoform'>
-                  <Button basic color='purple'>
-                    Add Video
-                  </Button>
-                  </Link>
-                </div>
+              <Modal trigger={<Button basic color='purple'>Add Video</Button>}>
+                <Modal.Header>Add Video</Modal.Header>
+                 <Modal.Content>
+                  <VidoeForm/>
+                 </Modal.Content>
+              </Modal>
               </Card.Content>
             </Card>
 
@@ -117,13 +127,12 @@ class AddEdit extends React.Component {
                 <Card.Header>Delete Video</Card.Header>
               </Card.Content>
               <Card.Content extra>
-                <div >
-                  <Link to='/videoedit'>
-                  <Button basic color='purple'>
-                    Delete Video
-                  </Button>
-                  </Link>
-                </div>
+              <Modal trigger={<Button basic color='purple'>Delete Video</Button>}>
+                <Modal.Header>Select a video to delete.</Modal.Header>
+                 <Modal.Content>
+                  <VideoEdit/>
+                 </Modal.Content>
+              </Modal>
               </Card.Content>
             </Card>
           </Card.Group>
@@ -133,13 +142,12 @@ class AddEdit extends React.Component {
                 <Card.Header>Add Image</Card.Header>
               </Card.Content>
               <Card.Content extra>
-                <div >
-                  <Link to='/imagesform'>
-                  <Button basic color='purple'>
-                    Add Image
-                  </Button>
-                  </Link>
-                </div>
+              <Modal trigger={<Button basic color='purple'>Add Image</Button>}>
+                <Modal.Header>Add an Image</Modal.Header>
+                 <Modal.Content>
+                  <ImagesForm/>
+                 </Modal.Content>
+              </Modal>
               </Card.Content>
             </Card>
 
@@ -148,13 +156,12 @@ class AddEdit extends React.Component {
                 <Card.Header>Delete Image</Card.Header>
               </Card.Content>
               <Card.Content extra>
-                <div >
-                  <Link to='/imagesedit'>
-                  <Button basic color='purple'>
-                    Delete Image
-                  </Button>
-                  </Link>
-                </div>
+              <Modal trigger={<Button basic color='purple'>Delete Image</Button>}>
+                <Modal.Header>Select an image to delete.</Modal.Header>
+                 <Modal.Content>
+                  <ImagesEdit/>
+                 </Modal.Content>
+              </Modal>
               </Card.Content>
             </Card>
           </Card.Group>
@@ -165,13 +172,12 @@ class AddEdit extends React.Component {
                 <Card.Header>Add Event</Card.Header>
               </Card.Content>
               <Card.Content extra>
-                <div >
-                  <Link to='/eventsform'>
-                  <Button basic color='purple'>
-                    Add Event
-                  </Button>
-                  </Link>
-                </div>
+              <Modal trigger={<Button basic color='purple'>Add Event</Button>}>
+                <Modal.Header>Add an Event</Modal.Header>
+                 <Modal.Content>
+                  <EventsForm/>
+                 </Modal.Content>
+              </Modal>
               </Card.Content>
             </Card>
 
@@ -180,19 +186,19 @@ class AddEdit extends React.Component {
                 <Card.Header>Delete Event</Card.Header>
               </Card.Content>
               <Card.Content extra>
-                <div >
-                  <Link to='/eventsedit'>
-                  <Button basic color='purple'>
-                    Delete Event
-                  </Button>
-                  </Link>
-                </div>
+              <Modal trigger={<Button basic color='purple'>Delete Event</Button>}>
+                <Modal.Header>Select an Event to delete.</Modal.Header>
+                 <Modal.Content>
+                  <EventsEdit/>
+                 </Modal.Content>
+              </Modal>
               </Card.Content>
             </Card>
           </Card.Group>
 
      
       </Container>
+      </>
     )
   }
 }

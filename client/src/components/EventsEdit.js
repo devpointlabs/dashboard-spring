@@ -40,11 +40,6 @@ class EventsEdit extends React.Component {
               <Button basic color='red' onClick={ () => this.deleteEvent(event.id) }>
                 Delete
               </Button>
-              <Link to='/addedit'>
-                  <Button basic color='purple'>
-                    Back
-                 </Button>
-              </Link>
             </div>
           </Card.Content>
         </Card>
@@ -59,13 +54,6 @@ class EventsEdit extends React.Component {
     return (
       <div>{this.renderEvents()}
       <br/>
-       <Container>
-        <Link to='/addedit'>
-          <Button  color='white'>
-            Control panel
-          </Button>
-         </Link>
-       </Container>
         </div>
     )
   }

@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-import './ImagesView.css';
 import { Image } from 'semantic-ui-react'
 
 
@@ -21,19 +20,19 @@ class ImagesView extends React.Component {
     case 1 :
     return images.map( images => (
       <>
-       <div style={{display: "flex", flexWrap: "wrap", }}>
-         {this.state.images.map(i=>
-           <div key={this.state.images.id} style={{ zIndex: "0", textAlign: "Center"}}>
-             <Link to={`/image/${i.id}`}>
-             <div >
-             <Image class='resp-iframe'src={i.image_url} />
-             </div>
-             </Link>
-             </div>)}
-       </div>
+        <div>
+          {this.state.images.map(i=>
+          <div key={this.state.images.id} style={{ zIndex: "0", textAlign: "Center"}}>
+            <Link to={`/image/${i.id}`}>
+              <div>
+                <Image style={{height: '50vh',width: '100vh',border: '0',position: 'absolute',top:'0',left:'0',}} src={i.image_url} resizeMode="stretch"/>
+              </div>
+            </Link>
+          </div>)}
+        </div>
       </>
     )
-  )
+    )
     case 0 : 
     return (
       <>
@@ -48,7 +47,7 @@ class ImagesView extends React.Component {
         <Link to="/imagesedit">Manage Images</Link>
       </>
     )
-}
+  }
 }
  render() {
    return (

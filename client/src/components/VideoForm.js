@@ -51,11 +51,7 @@ class VideoForm extends React.Component {
                     />
                 
                 <Button type="submit">Submit</Button>
-                <Link to='/addedit'>
-                  <Button  color='white'>
-                    Back
-                 </Button>
-                 </Link>
+                
             </Form>
             </Container>
         )

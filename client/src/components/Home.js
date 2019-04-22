@@ -4,12 +4,13 @@ import TopicsList from './TopicView'
 import  EventsView  from './EventsView';
 import VideoView from './VideoView'
 import ImagesView from './ImagesView'
+
 const Home = () => (
   
   <div>
     
-    <Grid divided='vertically' celled padded style={GridStyle}>
-      <Grid.Row overFlow='visible' columns={2} style={{height: '50%'}}>
+    <Grid celled padded style={GridStyle} >
+      <Grid.Row columns={2} style={{height: '50%'}}>
         <Grid.Column>
             <TopicsList/> 
         </Grid.Column>
@@ -20,7 +21,7 @@ const Home = () => (
 
 
       <Grid.Row columns={2} style={{height: '50%'}}>
-          <Grid.Column>
+          <Grid.Column >
             <VideoView />
           </Grid.Column>
           <Grid.Column>
@@ -38,7 +39,7 @@ const Home = () => (
 const GridStyle = {
   overflow: `visible`,
   whiteSpace: `nowrap`,
-  // height: `100vh`,
+  height: `100vh`,
   width: `100%`,
   margin: `0`,
   backgroundColor: `#eee`,

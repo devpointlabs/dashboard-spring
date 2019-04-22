@@ -45,14 +45,8 @@ class VideoEdit extends React.Component {
   render () {
     return (
       <div>{this.renderVideos()}
-        <br/>
-        <Container>
-        <Link to='/addedit'>
-          <Button  color='white'>
-            Control panel
-          </Button>
-         </Link>
-        </Container>
+
+      
       </div>
     )
   }
