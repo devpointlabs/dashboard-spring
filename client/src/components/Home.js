@@ -4,26 +4,27 @@ import TopicsList from './TopicView'
 import  EventsView  from './EventsView';
 import VideoView from './VideoView'
 import ImagesView from './ImagesView'
+import './ImagesView.css';
 const Home = () => (
   
-  <div>
+  <div class='grid'>
     
     <Grid divided='vertically' celled padded style={GridStyle}>
       <Grid.Row overFlow='visible' columns={2} style={{height: '50%'}}>
-        <Grid.Column>
+        <Grid.Column style={GridInner}>
             <TopicsList/> 
         </Grid.Column>
-        <Grid.Column>
+        <Grid.Column style={GridInner}>
           <ImagesView />
         </Grid.Column>
       </Grid.Row>
 
 
       <Grid.Row columns={2} style={{height: '50%'}}>
-          <Grid.Column>
+          <Grid.Column style={GridInner}>
             <VideoView />
           </Grid.Column>
-          <Grid.Column>
+          <Grid.Column style={GridInner}>
             <EventsView />
           </Grid.Column>
           
@@ -44,8 +45,12 @@ const GridStyle = {
   backgroundColor: `#eee`,
 }
 
-const Header = {
-  margin: '0'
+const GridInner = {
+  margin: '0',
+  boxShadow: 'none',
+  marginTop: '0',
+  marginBottom: '0',
+
 }
 
 export default Home;
