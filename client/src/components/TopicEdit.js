@@ -73,7 +73,7 @@ class TopicEdit extends React.Component {
     const { topics } = this.state
     return topics.map( topic => (
       <>
-      <Container style={styles.background}>
+      
 
       <Card.Group>      
         <Card>
@@ -99,7 +99,7 @@ class TopicEdit extends React.Component {
           </Card.Content>
         </Card>
       </Card.Group>
-      </Container>
+      
       </>
      )
    )

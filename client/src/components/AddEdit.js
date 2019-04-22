@@ -1,6 +1,6 @@
 import React from 'react'
 import { AuthConsumer, } from "../providers/AuthProvider";
-import { Menu, Card, Button, Modal, Image, Header } from 'semantic-ui-react'
+import { Menu, Card, Button, Modal, Image, Header, Container } from 'semantic-ui-react'
 import { Link, withRouter, } from 'react-router-dom'
 
 class AddEdit extends React.Component {
@@ -10,13 +10,13 @@ class AddEdit extends React.Component {
     
     if (user) {
       return (
-        <Menu.Menu position='right'>
-          <Menu.Item
+        <div position='right'>
+          <Button
             name='logout'
             onClick={ () => handleLogout(this.props.history) }
-          />
-        <iframe src="http://free.timeanddate.com/clock/i6pzp2mf/n220/fn7/fs20/fc5900b3/tct/pct/ftb/th2" frameborder="0" width="128" height="30" allowTransparency="true"></iframe>
-        </Menu.Menu>
+          > Logout
+          </Button>
+        </div>
       )
     } else {
       return (
@@ -42,12 +42,15 @@ class AddEdit extends React.Component {
   
   render() {
     return (
-      <div>
+      <Container>
 
           <Button>{ this.rightNavItems() }</Button>
-          <Card.Group>
+          <br/>
+          <br/>
+
 
              <Card>
+             <Image src='https://s3.invisionapp-cdn.com/storage.invisionapp.com/boards/files/141264491.png?x-amz-meta-iv=1&x-amz-meta-ck=5a81039525e5126ffd527a9f9f49b565&AWSAccessKeyId=AKIAJFUMDU3L6GTLUDYA&Expires=1559347200&Signature=GsqlvlhYAqK2NGW3fSA4FqSMWEQ%3D' />
               <Card.Content>
                 <Card.Header>Dashboard</Card.Header>
               </Card.Content>
@@ -62,6 +65,7 @@ class AddEdit extends React.Component {
               </Card.Content>
             </Card>
 
+          <Card.Group>
             <Card>
               <Card.Content>
                 <Card.Header>Add Topics</Card.Header>
@@ -91,6 +95,8 @@ class AddEdit extends React.Component {
                 </div>
               </Card.Content>
             </Card>
+          </Card.Group>
+          <Card.Group>
             <Card>
               <Card.Content>
                 <Card.Header>Add Video</Card.Header>
@@ -120,7 +126,8 @@ class AddEdit extends React.Component {
                 </div>
               </Card.Content>
             </Card>
-
+          </Card.Group>
+          <Card.Group>
             <Card>
               <Card.Content>
                 <Card.Header>Add Image</Card.Header>
@@ -150,6 +157,8 @@ class AddEdit extends React.Component {
                 </div>
               </Card.Content>
             </Card>
+          </Card.Group>
+          <Card.Group>
 
             <Card>
               <Card.Content>
@@ -183,7 +192,7 @@ class AddEdit extends React.Component {
           </Card.Group>
 
      
-      </div>
+      </Container>
     )
   }
 }

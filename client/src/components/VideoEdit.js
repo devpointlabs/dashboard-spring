@@ -18,7 +18,7 @@ class VideoEdit extends React.Component {
       .then( res => {
         const { videos, } = this.state;
         this.setState({ videos: videos.filter(video => video.id !== id), })
-        this.props.history.push("/videoview")
+        this.props.history.push("/videoedit")
       })
   }
 
@@ -36,11 +36,6 @@ class VideoEdit extends React.Component {
               <Button  color='red' onClick={ () => this.deleteVideo(video.id) }>
                 Delete
               </Button>
-              <Link to='/addedit'>
-                  <Button  color='white'>
-                    Back
-                  </Button>
-              </Link>
         </Container>
       </>
      )
@@ -49,10 +44,20 @@ class VideoEdit extends React.Component {
 
   render () {
     return (
-      <div>{this.renderVideos()}</div>
+      <div>{this.renderVideos()}
+        <br/>
+        <Container>
+        <Link to='/addedit'>
+          <Button  color='white'>
+            Control panel
+          </Button>
+         </Link>
+        </Container>
+      </div>
     )
   }
 }
+
 
 const styles = {
   background: {
