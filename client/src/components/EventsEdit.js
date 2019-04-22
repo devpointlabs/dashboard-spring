@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import { Header, Button, Card } from 'semantic-ui-react'
+import { Header, Button, Card, Container } from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 
 class EventsEdit extends React.Component {
@@ -25,7 +25,7 @@ class EventsEdit extends React.Component {
     const { events } = this.state
 
     return events.map( event => (
-      <div style={styles.background}>
+      <Container>
       <Card.Group>      
         <Card>
           <Card.Content>
@@ -40,23 +40,21 @@ class EventsEdit extends React.Component {
               <Button basic color='red' onClick={ () => this.deleteEvent(event.id) }>
                 Delete
               </Button>
-              <Link to='/addedit'>
-                  <Button basic color='purple'>
-                    Back
-                 </Button>
-              </Link>
             </div>
           </Card.Content>
         </Card>
       </Card.Group>
-      </div>
+      </Container>
+      
      )
    )
   }
 
   render () {
     return (
-      <div>{this.renderEvents()}</div>
+      <div>{this.renderEvents()}
+      <br/>
+        </div>
     )
   }
 }

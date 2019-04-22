@@ -12,7 +12,7 @@ class EventsForm extends React.Component {
     const event = { ...this.state, };
     axios.post("/api/events", event)
       .then( res => {
-        this.props.history.push("/eventsview");
+        this.props.history.push("/eventsedit");
       })
       this.setState({ ...this.defaultValues, });
   }
@@ -55,12 +55,8 @@ class EventsForm extends React.Component {
             value={end_time}
             onChange={this.handleChange}
           />
-          <Form.Button color="cyan">Submit></Form.Button>
-          <Link to='/addedit'>
-                  <Button  color='white'>
-                    Back
-                 </Button>
-          </Link>
+          <Form.Button color="cyan">Submit</Form.Button>
+         
         </Form>
       </Container>
     )

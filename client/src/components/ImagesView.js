@@ -36,9 +36,9 @@ class ImagesView extends React.Component {
     case 0 : 
     return (
       <>
-      <h1>You don't have any Images </h1>
-      <Link to="/imagesform">Add an Image</Link>
-    </>
+        <h1>You don't have any Images </h1>
+        <Link to="/imagesform">Add an Image</Link>
+      </>
     )
     default :
     return (
@@ -54,10 +54,12 @@ class ImagesView extends React.Component {
      <>
        <div >
          {this.renderImages()}
+      
        </div>
+              
+       
      </>
    )
  }
 }
-
 export default ImagesView

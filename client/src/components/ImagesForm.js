@@ -12,7 +12,7 @@ class ImagesForm extends React.Component {
       const images = { ...this.state, };
       axios.post("/api/images", images)
         .then( res => {
-          this.props.history.push("/imagesview");
+          this.props.history.push("/imagesedit");
         })
     }
   
@@ -44,11 +44,7 @@ class ImagesForm extends React.Component {
                   />
               
               <Button type="submit">Submit</Button>
-              <Link to='/addedit'>
-                  <Button  color='white'>
-                    Back
-                 </Button>
-              </Link>
+            
           </Form>
           </Container>
       )
