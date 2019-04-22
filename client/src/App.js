@@ -25,7 +25,8 @@ import AddEdit from './components/AddEdit'
 
 
 const App = () => (
-  <div style={{height:"100vh", background:"#6E54A3"}}>
+  
+  <div style={{ background:"#6E54A3"}}>
   {/* <Navbar /> */}
   <FetchUser>
   <div > 

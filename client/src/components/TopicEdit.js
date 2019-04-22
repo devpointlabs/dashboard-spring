@@ -73,7 +73,7 @@ class TopicEdit extends React.Component {
     const { topics } = this.state
     return topics.map( topic => (
       <>
-      <Container style={styles.background}>
+      
 
       <Card.Group>      
         <Card>
@@ -89,17 +89,11 @@ class TopicEdit extends React.Component {
               <Button basic color='red' onClick={ () => this.deleteTopic(topic.id) }>
                 Delete
               </Button>
-              <Link to='/addedit'>
-                  <Button  basic color='purple'>
-                    Back
-                 </Button>
-              </Link>
-              
             </div>
           </Card.Content>
         </Card>
       </Card.Group>
-      </Container>
+      
       </>
      )
    )

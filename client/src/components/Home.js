@@ -49,4 +49,14 @@ const Header = {
   margin: '0'
 }
 
+
+
+const GridInner = {
+  margin: '0',
+  boxShadow: 'none',
+  marginTop: '0',
+  marginBottom: '0',
+
+}
+
 export default Home;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { AuthConsumer, } from "../providers/AuthProvider";
-import { Button, Form, Segment, Header } from 'semantic-ui-react';
+import { Button, Image, Form, Segment, Header, Container } from 'semantic-ui-react';
 import { Link } from 'react-router-dom'
 
 class Register extends React.Component {
@@ -27,7 +27,13 @@ class Register extends React.Component {
     
     return (
       <div style={styles.background}>
+        <Container>
         <Segment basic>
+        <Link to='/'>
+         
+         <Image  src='https://s3.invisionapp-cdn.com/storage.invisionapp.com/boards/files/169539145.png?x-amz-meta-iv=1&x-amz-meta-ck=5a81039525e5126ffd527a9f9f49b565&AWSAccessKeyId=AKIAJFUMDU3L6GTLUDYA&Expires=1559347200&Signature=Dc%2F8OCYmDaB%2Bnuiii%2BJQjcKHheo%3D' />
+      
+         </Link>
           <Header as='h1' textAlign='center' style={styles.text}>Register</Header>
           <Form onSubmit={this.handleSubmit}>
             <label style={{color: 'white'}}>Email</label>
@@ -38,7 +44,7 @@ class Register extends React.Component {
                 value={email}
                 placeholder='Email'
                 onChange={this.handleChange}
-              />
+                />
             <label style={{color: 'white'}}>Password</label>
               <Form.Input
                 required
@@ -47,7 +53,7 @@ class Register extends React.Component {
                 placeholder='Password'
                 type='password'
                 onChange={this.handleChange}
-              />
+                />
             <label style={{color: 'white'}}>Password Confirmation</label>
               <Form.Input
                 required
@@ -56,7 +62,7 @@ class Register extends React.Component {
                 placeholder='Password Confirmation'
                 type='password'
                 onChange={this.handleChange}
-              />
+                />
               <Segment textAlign='center' basic>
                 <Button primary type='submit'>Submit</Button>
               </Segment>
@@ -66,6 +72,7 @@ class Register extends React.Component {
               </Segment>
           </Form>
         </Segment>
+      </Container>
       </div>
     )
   }

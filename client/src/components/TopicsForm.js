@@ -48,12 +48,7 @@ class TopicsForm extends React.Component {
             value={topic_image}
             onChange={this.handleChange}
           />
-          <Form.Button color="cyan">Submit></Form.Button>
-          <Link to='/addedit'>
-                  <Button  color='white'>
-                    Back
-                 </Button>
-          </Link>
+          <Form.Button color="cyan">Submit</Form.Button>
         </Form>
         <br/>
       </Container>
