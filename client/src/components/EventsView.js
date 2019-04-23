@@ -24,16 +24,11 @@ class EventsView extends React.Component {
       case 1 :
       return (
       <>
-<<<<<<< HEAD
-    <Header textAlign='center' as='h1'>Calendar of Events</Header>
-    <Header textAlign='center' as='h3'>Spring 2019</Header>
-=======
       
       <Header textAlign='center' as='h1'>Calender of Events</Header>
       {events.map( event => (
       
       <Header textAlign='center' as='h3'>{event.season}{event.year}</Header>))}
->>>>>>> eb5ae6ad1523d52961f0855f270bd6c64f7f1def
     {events.map( event => (
       
       <Table celled>
