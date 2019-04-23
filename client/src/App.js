@@ -23,7 +23,7 @@ import AddEdit from './components/AddEdit'
 import CohortForm from './components/CohortForm';
 import CohortEdit from './components/CohortEdit';
 import CohortView from './components/CohortView';
-
+import complete from './components/complete'
 
 
 
@@ -54,6 +54,7 @@ const App = () => (
         <ProtectedRoute exact path="/addedit" component={AddEdit} />
         <ProtectedRoute exact path="/cohortform" component={CohortForm} />
         <ProtectedRoute exact path="/cohortedit" component={CohortEdit} />
+        <ProtectedRoute exact path="/complete" component={complete} />
         <ProtectedRoute exact path="/cohortview" component={CohortView} />
 
         
