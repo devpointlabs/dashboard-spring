@@ -2,6 +2,7 @@ import React from 'react';
 import { Header, Table, } from 'semantic-ui-react';
 import axios from 'axios'
 import {Link, } from 'react-router-dom'
+import CohortView from './CohortView'
 
 
 class EventsView extends React.Component {
@@ -52,7 +53,7 @@ class EventsView extends React.Component {
         <>
        
 
-      <Header textAlign='center' as='h1'>Calender of Events</Header>
+      
       {events.reduce( event => (
       
       <Header textAlign='center' as='h3'>{event.season}{event.year}</Header>))}
@@ -79,10 +80,7 @@ class EventsView extends React.Component {
       <>
       
      
-      <Header textAlign='center' as='h1'>Calender of Events</Header>
-      {events.map( event => (
-      
-      <Header textAlign='center' as='h3'>{event.season}  {event.year}</Header>))}
+    
       {events.map( event => (
       <Table celled>
     
@@ -99,7 +97,7 @@ class EventsView extends React.Component {
       </Table>
       )
     )}
-  </>
+    </>
   )
 
       case 0 : 
@@ -122,6 +120,7 @@ class EventsView extends React.Component {
   render() {
     return (
       <div overflow='visible'>
+        <CohortView/>
         <div as='h1' textAlign='center'>{ this.renderTopics() }</div>
       </div>
     )

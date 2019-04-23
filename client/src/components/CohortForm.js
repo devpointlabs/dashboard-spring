@@ -3,22 +3,22 @@ import { Form, Header, Button, Image, Container} from "semantic-ui-react";
 import axios from "axios";
 import {Link, withRouter} from 'react-router-dom'
 
-class SeasonYearForm extends React.Component {
+class CohortForm extends React.Component {
   defaultValues = { season: "", year: "" };
   state = { ...this.defaultValues, };
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const event = { ...this.state, };
-    axios.post("/api/events", event)
+    const cohort = { ...this.state, };
+    axios.post("/api/cohorts", cohort)
       .then( res => {
-        this.props.history.push("/eventsedit");
+        this.props.history.push("/cohortedit");
       })
       this.setState({ ...this.defaultValues, });
   }
 
-  handleChange = (e) => {
-    const{ name, value, } = e.target
+  handleChange = (c) => {
+    const{ name, value, } = c.target
     this.setState({ [name]: value, });
   }
 
@@ -76,4 +76,4 @@ const styles = {
   }
 }
 
-export default withRouter(SeasonYearForm);
+export default withRouter(CohortForm);

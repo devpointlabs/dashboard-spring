@@ -20,7 +20,9 @@ import ImagesEdit from './components/ImagesEdit'
 import ImagesForm from './components/ImagesForm'
 import EventsEdit from './components/EventsEdit'
 import AddEdit from './components/AddEdit'
-import SeasonYearForm from './components/SeasonYearForm';
+import CohortForm from './components/CohortForm';
+import CohortEdit from './components/CohortEdit';
+import CohortView from './components/CohortView';
 
 
 
@@ -50,8 +52,9 @@ const App = () => (
         <ProtectedRoute exact path="/imagesview" component={ImagesView} />
         <ProtectedRoute exact path="/imagesedit" component={ImagesEdit} />
         <ProtectedRoute exact path="/addedit" component={AddEdit} />
-        <ProtectedRoute exact path="/seasonyearform" component={SeasonYearForm} />
-
+        <ProtectedRoute exact path="/cohortform" component={CohortForm} />
+        <ProtectedRoute exact path="/cohortedit" component={CohortEdit} />
+        <ProtectedRoute exact path="/cohortview" component={CohortView} />
 
         
         <Route component={NoMatch} />
