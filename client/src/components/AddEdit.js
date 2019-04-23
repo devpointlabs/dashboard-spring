@@ -10,6 +10,8 @@ import VideoEdit from './VideoEdit'
 import VidoeForm from './VideoForm'
 import TopicEdit from './TopicEdit'
 import TopicsForm from './TopicsForm'
+import CohortForm from './CohortForm'
+import CohortEdit from './CohortEdit'
 
 class AddEdit extends React.Component {
   
@@ -165,8 +167,8 @@ class AddEdit extends React.Component {
               </Card.Content>
             </Card>
           </Card.Group>
+          
           <Card.Group>
-
             <Card>
               <Card.Content>
                 <Card.Header>Add Event</Card.Header>
@@ -195,8 +197,36 @@ class AddEdit extends React.Component {
               </Card.Content>
             </Card>
           </Card.Group>
+          <Card.Group>
+          <Card>
+              <Card.Content>
+                <Card.Header>Add Cohort</Card.Header>
+              </Card.Content>
+              <Card.Content extra>
+              <Modal trigger={<Button basic color='purple'>Add Cohort</Button>}>
+                <Modal.Header>Add a Cohort</Modal.Header>
+                 <Modal.Content>
+                  <CohortForm/>
+                 </Modal.Content>
+              </Modal>
+              </Card.Content>
+            </Card>
 
-     
+
+            <Card>
+              <Card.Content>
+                <Card.Header>Delete Cohort</Card.Header>
+              </Card.Content>
+              <Card.Content extra>
+              <Modal trigger={<Button basic color='purple'>Delete Cohort</Button>}>
+                <Modal.Header>Select an Cohort to delete.</Modal.Header>
+                 <Modal.Content>
+                  <CohortEdit/>
+                 </Modal.Content>
+              </Modal>
+              </Card.Content>
+            </Card>
+          </Card.Group>
       </Container>
       </>
     )
