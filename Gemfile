@@ -24,6 +24,7 @@ gem 'puma', '~> 3.11'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'cloudinary'
 
 gem "devise_token_auth", "~> 1.0.0"
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
@@ -32,6 +33,7 @@ gem "devise_token_auth", "~> 1.0.0"
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'pry'
+  gem 'dotenv-rails'
 end
 
 group :development do

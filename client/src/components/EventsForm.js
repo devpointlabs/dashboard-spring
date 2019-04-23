@@ -37,26 +37,7 @@ class EventsForm extends React.Component {
         <Header as="h1" style={styles.text}>New Event</Header> 
         
       <Form onSubmit={this.handleSubmit}>
-            <label style={{color: 'white'}}>Season</label>
-            <Form.Input 
-             
-              name="season"
-              autoFocus
-              placeholder="Season"
-              value={season}
-              onChange={this.handleChange}
-              required
-            />
-            <label style={{color: 'white'}}>Year</label>
-            <Form.Input 
-             
-              name="year"
-              autoFocus
-              placeholder="Year"
-              value={year}
-              onChange={this.handleChange}
-              required
-            />
+
           <label style={{color: 'white'}}>Title</label>
             <Form.Input 
              
@@ -99,7 +80,16 @@ const styles = {
   },
   text: {
     color: "white"
+  },
+  h1: {
+    fontSize: '40px',
+   },
+  h4: {
+    fontSize: '25px',
+    fontWeight: 'normal'
   }
 }
+
+
 
 export default withRouter(EventsForm);
