@@ -19,20 +19,25 @@ class EventsView extends React.Component {
   renderTopics = () => {
     const { events, } = this.state
     switch  (events.length) {
+
       case 1 :
       return (
       <>
-    <Header textAlign='center' as='h1'>Calender of Events</Header>
-    <Header textAlign='center' as='h3'>Spring 2019</Header>
+      
+      <Header textAlign='center' as='h1'>Calender of Events</Header>
+      {events.map( event => (
+      
+      <Header textAlign='center' as='h3'>{event.season}{event.year}</Header>))}
     {events.map( event => (
-    
+      
       <Table celled>
     
         <Table.Body style={BackgroundStyles}>
+      
           <Table.Row>
             <Table.Cell>
             <Header>{event.title}</Header>
-            <Header.Subheader>{event.date}</Header.Subheader>
+            <Header.Subheader >{event.date}</Header.Subheader>
             <Header.Subheader>{event.time}</Header.Subheader>
             </Table.Cell>
           </Table.Row>
@@ -45,8 +50,12 @@ class EventsView extends React.Component {
       case 2 :
       return (
         <>
+       
+
       <Header textAlign='center' as='h1'>Calender of Events</Header>
-      <Header textAlign='center' as='h3'>Spring 2019</Header>
+      {events.reduce( event => (
+      
+      <Header textAlign='center' as='h3'>{event.season}{event.year}</Header>))}
       {events.map( event => (
       
         <Table celled>
@@ -68,16 +77,20 @@ class EventsView extends React.Component {
     case 3 :
     return (
       <>
-    <Header textAlign='center' as='h1'>Calender of Events</Header>
-    <Header textAlign='center' as='h3'>Spring 2019</Header>
-    {events.map( event => (
-    
+      
+     
+      <Header textAlign='center' as='h1'>Calender of Events</Header>
+      {events.map( event => (
+      
+      <Header textAlign='center' as='h3'>{event.season}  {event.year}</Header>))}
+      {events.map( event => (
       <Table celled>
     
         <Table.Body style={BackgroundStyles}>
           <Table.Row>
             <Table.Cell>
             <Header>{event.title}</Header>
+            
             <Header.Subheader>{event.date}</Header.Subheader>
             <Header.Subheader>{event.time}</Header.Subheader>
             </Table.Cell>

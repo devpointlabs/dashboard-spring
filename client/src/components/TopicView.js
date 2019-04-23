@@ -42,7 +42,7 @@ class TopicView extends React.Component {
       return (
         <>
           <h1>You Have Too Many Topics </h1>
-          <Link to="/topics/edit">Mange Topics</Link>
+          <Link to="/topics/edit">Manage Topics</Link>
         </>
       )
   }

@@ -10,6 +10,7 @@ import VideoEdit from './VideoEdit'
 import VidoeForm from './VideoForm'
 import TopicEdit from './TopicEdit'
 import TopicsForm from './TopicsForm'
+// import SeasonYearForm from './SeasonYearForm'
 
 class AddEdit extends React.Component {
   
@@ -178,6 +179,12 @@ class AddEdit extends React.Component {
                   <EventsForm/>
                  </Modal.Content>
               </Modal>
+              {/* <Modal trigger={<Button basic color='purple'>Set Season/Year</Button>}>
+                <Modal.Header>Set Season/Year</Modal.Header>
+                 <Modal.Content>
+                  <SeasonYearForm/>
+                 </Modal.Content>
+              </Modal> */}
               </Card.Content>
             </Card>
 
