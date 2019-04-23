@@ -33,6 +33,7 @@ class EventsView extends React.Component {
       
           <Table.Row>
             <Table.Cell>
+            <Header>{event.class}</Header>
             <Header>{event.title}</Header>
             <Header.Subheader >{event.date}</Header.Subheader>
             <Header.Subheader>{event.time}</Header.Subheader>
@@ -55,6 +56,7 @@ class EventsView extends React.Component {
           <Table.Body style={BackgroundStyles}>
             <Table.Row>
               <Table.Cell>
+              <Header>{event.season}</Header>
               <Header>{event.title}</Header>
               <Header.Subheader>{event.date}</Header.Subheader>
               <Header.Subheader>{event.time}</Header.Subheader>
@@ -76,6 +78,7 @@ class EventsView extends React.Component {
         <Table.Body style={BackgroundStyles}>
           <Table.Row>
             <Table.Cell>
+            <Header>{event.season}</Header>
             <Header>{event.title}</Header>
             
             <Header.Subheader>{event.date}</Header.Subheader>
