@@ -18,6 +18,7 @@ class CohortView extends React.Component {
 
   renderCohorts = () => {
     const { cohorts, } = this.state
+    const space = "  "
     switch  (cohorts.length) {
 
       case 1 :
@@ -27,7 +28,7 @@ class CohortView extends React.Component {
       <Header textAlign='center' as='h1'>Calender of Events</Header>
       {cohorts.map( cohort => (
       
-      <Header textAlign='center' as='h3'>{cohort.season}-{cohort.year}</Header>))}
+      <Header textAlign='center' as='h3'>{cohort.season}{space}{cohort.year}</Header>))}
     {
       
       
