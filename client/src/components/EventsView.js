@@ -22,7 +22,7 @@ class EventsView extends React.Component {
       case 1 :
       return (
       <>
-    <Header textAlign='center' as='h1'>Calender of Events</Header>
+    <Header textAlign='center' as='h1'>Calendar of Events</Header>
     <Header textAlign='center' as='h3'>Spring 2019</Header>
     {events.map( event => (
     
@@ -31,6 +31,7 @@ class EventsView extends React.Component {
         <Table.Body style={BackgroundStyles}>
           <Table.Row>
             <Table.Cell>
+            <Header>{event.class}</Header>
             <Header>{event.title}</Header>
             <Header.Subheader>{event.date}</Header.Subheader>
             <Header.Subheader>{event.time}</Header.Subheader>
@@ -54,6 +55,7 @@ class EventsView extends React.Component {
           <Table.Body style={BackgroundStyles}>
             <Table.Row>
               <Table.Cell>
+              <Header>{event.season}</Header>
               <Header>{event.title}</Header>
               <Header.Subheader>{event.date}</Header.Subheader>
               <Header.Subheader>{event.time}</Header.Subheader>
@@ -77,6 +79,7 @@ class EventsView extends React.Component {
         <Table.Body style={BackgroundStyles}>
           <Table.Row>
             <Table.Cell>
+            <Header>{event.season}</Header>
             <Header>{event.title}</Header>
             <Header.Subheader>{event.date}</Header.Subheader>
             <Header.Subheader>{event.time}</Header.Subheader>
