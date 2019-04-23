@@ -44,12 +44,11 @@ class CohortForm extends React.Component {
               value={season}
               onChange={this.handleChange}
               required
-            />
+              />
             <label style={{color: 'white'}}>Year</label>
             <Form.Input 
              
-              name="year"
-              autoFocus
+             name="year"
               placeholder="Year"
               value={year}
               onChange={this.handleChange}

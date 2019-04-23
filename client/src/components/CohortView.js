@@ -31,8 +31,6 @@ class CohortView extends React.Component {
       <Header textAlign='center' as='h3'>{cohort.season}{space}{cohort.year}</Header>))}
     {
       
-      
-      
   }
       </>
   )
