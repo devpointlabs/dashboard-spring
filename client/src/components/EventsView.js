@@ -22,12 +22,11 @@ class EventsView extends React.Component {
       case 1 :
       return (
       <>
-    <Header textAlign='center' as='h1'>Calender of Events</Header>
+    <Header textAlign='center' style={styles.h1}>Calender of Events</Header>
     <Header textAlign='center' as='h3'>Spring 2019</Header>
     {events.map( event => (
     
       <Table celled>
-    
         <Table.Body style={BackgroundStyles}>
           <Table.Row>
             <Table.Cell>
@@ -42,10 +41,11 @@ class EventsView extends React.Component {
     )}
   </>
   )
+    
       case 2 :
       return (
         <>
-      <Header textAlign='center' as='h1'>Calender of Events</Header>
+      <Header textAlign='center' style={styles.h1}>Calender of Events</Header>
       <Header textAlign='center' as='h3'>Spring 2019</Header>
       {events.map( event => (
       
@@ -68,10 +68,10 @@ class EventsView extends React.Component {
     case 3 :
     return (
       <>
-    <Header textAlign='center' as='h1'>Calender of Events</Header>
-    <Header textAlign='center' as='h3'>Spring 2019</Header>
+      <Header textAlign='center' style={styles.h1}>Calender of Events</Header>
+      <Header textAlign='center' as='h3'>Spring 2019</Header>
     {events.map( event => (
-    
+      
       <Table celled>
     
         <Table.Body style={BackgroundStyles}>
@@ -115,7 +115,17 @@ class EventsView extends React.Component {
   }
 }
 const BackgroundStyles = {
-    backgroundColor:`grey`,
+    backgroundColor:`#9E9E9E`,
+  }
+
+  const styles = {
+    h1: {
+      fontSize: '40px',
+     },
+    h4: {
+      fontSize: '25px',
+      fontWeight: 'normal'
+    }
   }
     
 export default EventsView;

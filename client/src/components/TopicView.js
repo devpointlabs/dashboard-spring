@@ -55,15 +55,11 @@ class TopicView extends React.Component {
         <br/>
         <br/>
         <br/>
-        <br/>
         <Link to="/addedit">
-
-        <Header as='h1' textAlign='center'>Today's Lecture Topic:</Header>
+        <Header style={styles.h1} textAlign='center'>Today's Lecture Topic:</Header>
         </Link>
-        <Header as='h4' textAlign='center'>University of Utah Full-Time Web Development</Header>
+        <Header style={styles.h4} textAlign='center'>University of Utah Full-Time Web Development</Header>
         <Header textAlign='center'>
-
-
         <iframe src="http://free.timeanddate.com/clock/i6q14t74/n220/fs24/fc5900b3/tct/pct/tt1/tw0" frameborder="0" width="220" height="30" allowTransparency="true"></iframe>
         </Header>
         <Header as='h1' textAlign='center'>{ this.renderTopics() }</Header>
@@ -75,5 +71,18 @@ class TopicView extends React.Component {
   }
 }
 
+const styles = {
+  h1: {
+    fontSize: '40px',
+   },
+  h4: {
+    fontSize: '25px',
+    fontWeight: 'normal'
+  }
+} 
+
     
 export default TopicView;
+
+
+

@@ -76,7 +76,16 @@ const styles = {
   },
   text: {
     color: "white"
+  },
+  h1: {
+    fontSize: '40px',
+   },
+  h4: {
+    fontSize: '25px',
+    fontWeight: 'normal'
   }
 }
+
+
 
 export default withRouter(EventsForm);
