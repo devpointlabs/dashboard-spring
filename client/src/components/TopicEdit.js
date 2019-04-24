@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
-import { Image, Button, Card, Form, Header, Container } from 'semantic-ui-react'
-import { Link, withRouter } from 'react-router-dom'
+import { Image, Button, Card, Form, Header } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 
 class TopicEdit extends React.Component {
   state = { topics: [], editing: false, };
@@ -111,13 +111,6 @@ class TopicEdit extends React.Component {
 
       </>
     )
-  }
-}
-
-const styles = {
-  background: {
-    backgroundColor: "#6E54A3",
-    height: "100vh",
   }
 }
 

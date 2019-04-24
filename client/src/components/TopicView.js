@@ -60,7 +60,7 @@ class TopicView extends React.Component {
         </Link>
         <Header style={styles.h4} textAlign='center'>University of Utah Full-Time Web Development</Header>
         <Header textAlign='center'>
-        <iframe src="http://free.timeanddate.com/clock/i6q14t74/n220/fs24/fc5900b3/tct/pct/tt1/tw0" frameborder="0" width="220" height="30" allowTransparency="true"></iframe>
+        <iframe title='myframe' src="http://free.timeanddate.com/clock/i6q14t74/n220/fs24/fc5900b3/tct/pct/tt1/tw0" frameborder="0" width="220" height="30" allowTransparency="true"></iframe>
         </Header>
         <Header as='h1' textAlign='center'>{ this.renderTopics() }</Header>
         {/* <Image src={topic.image_image} centered size="tiny"></Image> */}
