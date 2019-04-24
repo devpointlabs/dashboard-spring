@@ -15,7 +15,7 @@ class Navbar extends React.Component {
             name='logout'
             onClick={ () => handleLogout(this.props.history) }
           />
-        <iframe src="http://free.timeanddate.com/clock/i6pzp2mf/n220/fn7/fs20/fc5900b3/tct/pct/ftb/th2" frameborder="0" width="128" height="30" allowTransparency="true"></iframe>
+        <iframe title='myframe' src="http://free.timeanddate.com/clock/i6pzp2mf/n220/fn7/fs20/fc5900b3/tct/pct/ftb/th2" frameborder="0" width="128" height="30" allowTransparency="true"></iframe>
         </Menu.Menu>
       )
     } else {

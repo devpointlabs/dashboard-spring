@@ -1,6 +1,6 @@
 import React from 'react'
 import { AuthConsumer, } from "../providers/AuthProvider";
-import { Menu, Card, Button, Modal, Image, Header, Container } from 'semantic-ui-react'
+import { Menu, Card, Button, Modal, Image, Container } from 'semantic-ui-react'
 import { Link, withRouter, } from 'react-router-dom'
 import EventsEdit from './EventsEdit'
 import EventsForm from './EventsForm'

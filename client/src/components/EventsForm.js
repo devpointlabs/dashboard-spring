@@ -1,10 +1,10 @@
 import React from 'react';
-import { Segment, Form, Header, Button, Image, Container} from "semantic-ui-react";
+import { Form, Header, Image, Container} from "semantic-ui-react";
 import axios from "axios";
 import {Link, withRouter} from 'react-router-dom'
 
 class EventsForm extends React.Component {
-  defaultValues = { title: "", date: "", time: "", season: "", year: "" };
+  defaultValues = { title: "", date: "", time: "" };
   state = { ...this.defaultValues, };
 
   handleSubmit = (e) => {
@@ -23,7 +23,7 @@ class EventsForm extends React.Component {
   }
 
   render () {
-    const { title, date, time, season, year } = this.state;
+    const { title, date, time } = this.state;
 
     return (
       <Container style={styles.background}>

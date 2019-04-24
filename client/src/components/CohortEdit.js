@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import { Header, Button, Card, Container, Image } from 'semantic-ui-react'
+import { Button, Card, Container, Image } from 'semantic-ui-react'
 import {Link, withRouter} from 'react-router-dom'
 
 class CohortEdit extends React.Component {
@@ -65,12 +65,6 @@ class CohortEdit extends React.Component {
       </Container>
       </>
     )
-  }
-}
-const styles = {
-  background: {
-    backgroundColor: "#6E54A3",
-    height: "100vh",
   }
 }
 
