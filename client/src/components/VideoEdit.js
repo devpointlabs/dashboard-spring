@@ -62,12 +62,7 @@ class VideoEdit extends React.Component {
 }
 
 
-const styles = {
-  background: {
-    backgroundColor: "#6E54A3",
-    height: "100vh",
-  }
-}
+
 
 export default withRouter(VideoEdit)
        

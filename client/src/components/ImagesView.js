@@ -23,11 +23,11 @@ class ImagesView extends React.Component {
         <div>
           {this.state.images.map(i=>
           <div key={this.state.images.id} style={{ zIndex: "0", textAlign: "Center"}}>
-            <Link to={`/image/${i.id}`}>
+            
               <div>
                 <Image style={{height: '50vh',width: '100vh',border: '0',position: 'absolute',top:'0',left:'0',}} src={i.image_url} resizeMode="stretch"/>
               </div>
-            </Link>
+           
           </div>)}
         </div>
       </>

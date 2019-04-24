@@ -121,15 +121,15 @@ const BackgroundStyles = {
 backgroundColor:`#9E9E9E`,
 }
 
-const styles = {
-h1: {
-  fontSize: '40px',
- },
-h4: {
-  fontSize: '25px',
-  fontWeight: 'normal'
-}
-}
+// const styles = {
+// h1: {
+//   fontSize: '40px',
+//  },
+// h4: {
+//   fontSize: '25px',
+//   fontWeight: 'normal'
+// }
+// }
 
 export default EventsView;
   

@@ -1,7 +1,6 @@
 import React  from 'react';
 import Home from './components/Home';
 import NoMatch from './components/NoMatch';
-import Navbar from './components/Navbar';
 import Login from './components/Login';
 import Register from './components/Register';
 import { Switch, Route, } from 'react-router-dom';
@@ -31,7 +30,6 @@ import complete from './components/complete'
 const App = () => (
   
   <div style={{ background:"#6E54A3"}}>
-  {/* <Navbar /> */}
   <FetchUser>
   <div > 
     

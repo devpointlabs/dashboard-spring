@@ -1,5 +1,5 @@
 import React from 'react';
-import {  Grid, Container, Advertisement} from 'semantic-ui-react';
+import {  Grid, } from 'semantic-ui-react';
 import TopicsList from './TopicView'
 import  EventsView  from './EventsView';
 import VideoView from './VideoView'
@@ -45,18 +45,5 @@ const GridStyle = {
   backgroundColor: `#eee`,
 }
 
-const Header = {
-  margin: '0'
-}
-
-
-
-const GridInner = {
-  margin: '0',
-  boxShadow: 'none',
-  marginTop: '0',
-  marginBottom: '0',
-
-}
 
 export default Home;

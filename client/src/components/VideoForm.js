@@ -12,7 +12,7 @@ class VideoForm extends React.Component {
         const videos = { ...this.state, };
         axios.post("/api/videos", videos)
           .then( res => {
-            this.props.history.push("/videoedit");
+            this.props.history.push("/complete");
           })
           // this.setState({ ...this.defaultValues, });
       }

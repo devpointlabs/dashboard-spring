@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Header, Button, Image, Container} from "semantic-ui-react";
+import { Form, Header,  Image, Container} from "semantic-ui-react";
 import axios from "axios";
 import {Link, withRouter} from 'react-router-dom'
 
@@ -12,7 +12,7 @@ class CohortForm extends React.Component {
     const cohort = { ...this.state, };
     axios.post("/api/cohorts", cohort)
       .then( res => {
-        this.props.history.push("/cohortedit");
+        this.props.history.push("/complete");
       })
       this.setState({ ...this.defaultValues, });
   }
