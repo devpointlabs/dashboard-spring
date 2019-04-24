@@ -26,6 +26,7 @@ class TopicsForm extends React.Component {
   }
 
   render () {
+
     const { title, topic_image } = this.state;
     return (
       <Container style={styles.background}>

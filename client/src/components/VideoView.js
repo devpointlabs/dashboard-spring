@@ -25,7 +25,7 @@ class VideoView extends React.Component {
              <Link to={`/video/${v.id}`}>
              <div>
                <iframe class="resp-iframe" title='myframe' src={v.video_url}
-                 allowfullscreen>
+                 allowfullscreen loop>
                </iframe>
              </div>
              </Link>

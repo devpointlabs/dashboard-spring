@@ -32,7 +32,9 @@ class EventsEdit extends React.Component {
             <Card.Header>{ event.title }</Card.Header>
             
             <Card.Description>
-              DATE AND TIME
+              {event.date}
+              <br></br>
+              {event.time}
             </Card.Description>
           </Card.Content>
           <Card.Content extra>

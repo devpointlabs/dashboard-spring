@@ -54,8 +54,6 @@ const App = () => (
         <ProtectedRoute exact path="/cohortedit" component={CohortEdit} />
         <ProtectedRoute exact path="/complete" component={complete} />
         <ProtectedRoute exact path="/cohortview" component={CohortView} />
-
-        
         <Route component={NoMatch} />
       </Switch>
     

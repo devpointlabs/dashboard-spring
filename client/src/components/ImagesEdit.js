@@ -63,5 +63,4 @@ class ImagesEdit extends React.Component {
   }
 }
 
-
 export default withRouter(ImagesEdit)

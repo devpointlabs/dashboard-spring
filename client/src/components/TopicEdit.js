@@ -114,8 +114,6 @@ class TopicEdit extends React.Component {
   }
 }
 
-
-
 export default withRouter(TopicEdit)
-            
+
 

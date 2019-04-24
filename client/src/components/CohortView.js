@@ -25,7 +25,7 @@ class CohortView extends React.Component {
       return (
       <>
       
-      <Header textAlign='center' as='h1'>Calender of Events</Header>
+      <Header textAlign='center' as='h1'>Calendar of Events</Header>
       {cohorts.map( cohort => (
       
       <Header textAlign='center' as='h3'>{cohort.season}{space}{cohort.year}</Header>))}

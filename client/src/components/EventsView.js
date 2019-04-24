@@ -25,15 +25,14 @@ class EventsView extends React.Component {
       return (
       <>
       
- 
     {events.map( event => (
       
       <Table celled>
+    
         <Table.Body style={BackgroundStyles}>
       
           <Table.Row>
             <Table.Cell>
-            <Header>{event.class}</Header>
             <Header>{event.title}</Header>
             <Header.Subheader >{event.date}</Header.Subheader>
             <Header.Subheader>{event.time}</Header.Subheader>
@@ -45,10 +44,10 @@ class EventsView extends React.Component {
     )}
   </>
   )
-    
       case 2 :
       return (
         <>
+      
       {events.map( event => (
       
         <Table celled>
@@ -56,7 +55,6 @@ class EventsView extends React.Component {
           <Table.Body style={BackgroundStyles}>
             <Table.Row>
               <Table.Cell>
-              <Header>{event.season}</Header>
               <Header>{event.title}</Header>
               <Header.Subheader>{event.date}</Header.Subheader>
               <Header.Subheader>{event.time}</Header.Subheader>
@@ -71,14 +69,12 @@ class EventsView extends React.Component {
     case 3 :
     return (
       <>
-    
       {events.map( event => (
       <Table celled>
     
         <Table.Body style={BackgroundStyles}>
           <Table.Row>
             <Table.Cell>
-            <Header>{event.season}</Header>
             <Header>{event.title}</Header>
             
             <Header.Subheader>{event.date}</Header.Subheader>
@@ -89,54 +85,46 @@ class EventsView extends React.Component {
       </Table>
       )
     )}
-    </>
+      </>
   )
-  case 0 : 
-  return (
-    <>
-      <h1>You don't have any Events </h1>
-      <Link to="/eventsform">Add A Event</Link>
-    </>
-  )
-  default :
-  return (
-    <>
-      <h1>You Have Too Many Events </h1>
-      <Link to="/eventsedit">Manage Events</Link>
-    </>
-  )
-}
-}
 
-render() {
-return (
-  <div overflow='visible'>
-    <CohortView/>
-    <div as='h1' textAlign='center'>{ this.renderTopics() }</div>
-  </div>
-)
+      case 0 : 
+      return (
+        <>
+          <h1>You don't have any Events </h1>
+          <Link to="/eventsform">Add A Event</Link>
+        </>
+      )
+      default :
+      return (
+        <>
+          <h1>You Have Too Many Events </h1>
+          <Link to="/eventsedit">Manage Events</Link>
+        </>
+      )
+  }
 }
+    
+  render() {
+    return (
+      <div overflow='visible'>
+        <CohortView/>
+        <div as='h1' textAlign='center'>{ this.renderTopics() }</div>
+      </div>
+    )
+  }
 }
 const BackgroundStyles = {
+
 backgroundColor:`#9E9E9E`,
 }
 
-// const styles = {
-// h1: {
-//   fontSize: '40px',
-//  },
-// h4: {
-//   fontSize: '25px',
-//   fontWeight: 'normal'
-// }
-// }
+
+
 
 export default EventsView;
-  
-    
       
-     
-
+        
            
        
    

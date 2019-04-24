@@ -4,7 +4,7 @@ import axios from "axios";
 import {Link, withRouter} from 'react-router-dom'
 
 class EventsForm extends React.Component {
-  defaultValues = { title: "", date: "", time: "", season: "", year: "" };
+  defaultValues = { title: "", date: "", time: "" };
   state = { ...this.defaultValues, };
 
   handleSubmit = (e) => {
@@ -23,7 +23,8 @@ class EventsForm extends React.Component {
   }
 
   render () {
-    const { title, date, time, } = this.state;
+
+    const { title, date, time } = this.state;
 
     return (
       <Container style={styles.background}>
