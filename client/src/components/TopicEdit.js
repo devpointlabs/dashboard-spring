@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
-import { Image, Button, Card, Form, Header } from 'semantic-ui-react'
-import { Link } from 'react-router-dom'
+import { Image, Button, Card, Form, Header, } from 'semantic-ui-react'
+import { Link, withRouter } from 'react-router-dom'
 
 class TopicEdit extends React.Component {
   state = { topics: [], editing: false, };
@@ -86,7 +86,7 @@ class TopicEdit extends React.Component {
             <Image floated='right' size='Medium' src={topic.topic_image} />
             <Card.Header>{ topic.title }</Card.Header>
             <Card.Description>
-              DATE AND TIME
+             
             </Card.Description>
           </Card.Content>
           <Card.Content extra>
@@ -114,6 +114,6 @@ class TopicEdit extends React.Component {
   }
 }
 
-export default TopicEdit
-            
+export default withRouter(TopicEdit)
+
 

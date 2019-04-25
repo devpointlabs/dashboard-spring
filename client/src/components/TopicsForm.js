@@ -2,7 +2,7 @@ import React from 'react';
 import { Form, Header, Image, Container} from "semantic-ui-react";
 import axios from "axios"
 import {Link, withRouter} from 'react-router-dom'
-// import DropZone from 'react-dropzone'
+
 
 
 
@@ -26,7 +26,8 @@ class TopicsForm extends React.Component {
   }
 
   render () {
-    const { title,topic_image } = this.state;
+
+    const { title, topic_image } = this.state;
     return (
       <Container style={styles.background}>
        <Link to='/'>

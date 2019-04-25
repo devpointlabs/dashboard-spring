@@ -30,7 +30,6 @@ import complete from './components/complete'
 const App = () => (
   
   <div style={{ background:"#6E54A3"}}>
-  {/* <Navbar /> */}
   <FetchUser>
   <div > 
     

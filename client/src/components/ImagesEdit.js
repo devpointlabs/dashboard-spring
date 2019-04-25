@@ -34,7 +34,7 @@ class ImagesEdit extends React.Component {
             <Card.Description>
             </Card.Description>
           </Card.Content>
-          <Card.Content extra>
+          <Card.Content >
             <div className='ui two buttons'>
               <Button basic color='red' onClick={ () => this.deleteImages(image.id) }>
                 Delete

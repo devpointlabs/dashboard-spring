@@ -11,10 +11,15 @@ class complete extends React.Component {
 <Image  src='https://s3.invisionapp-cdn.com/storage.invisionapp.com/boards/files/169539145.png?x-amz-meta-iv=1&x-amz-meta-ck=5a81039525e5126ffd527a9f9f49b565&AWSAccessKeyId=AKIAJFUMDU3L6GTLUDYA&Expires=1559347200&Signature=Dc%2F8OCYmDaB%2Bnuiii%2BJQjcKHheo%3D' />
       
  </Link>
- <Header as='h1'>
+ <Header as='h1' textAlign="center" style={styles}>
    Submission Complete
  </Header>
 </>
     )}
     }   
 export default complete;
+
+const styles = {
+  color: 'white',
+  fontSize: '60px'
+}

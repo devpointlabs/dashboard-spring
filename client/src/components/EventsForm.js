@@ -12,7 +12,7 @@ class EventsForm extends React.Component {
     const event = { ...this.state, };
     axios.post("/api/events", event)
       .then( res => {
-        this.props.history.push("/eventsedit");
+        this.props.history.push("/complete");
       })
       this.setState({ ...this.defaultValues, });
   }
@@ -23,6 +23,7 @@ class EventsForm extends React.Component {
   }
 
   render () {
+
     const { title, date, time } = this.state;
 
     return (

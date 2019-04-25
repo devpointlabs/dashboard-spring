@@ -70,4 +70,5 @@ class EventsEdit extends React.Component {
   }
 }
 
+
 export default withRouter(EventsEdit)

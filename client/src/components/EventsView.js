@@ -115,9 +115,13 @@ class EventsView extends React.Component {
   }
 }
 const BackgroundStyles = {
-    backgroundColor:`grey`,
-  }
-    
+
+backgroundColor:`#9E9E9E`,
+}
+
+
+
+
 export default EventsView;
       
         

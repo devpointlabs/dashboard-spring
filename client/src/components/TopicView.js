@@ -34,14 +34,14 @@ class TopicView extends React.Component {
       case 0 : 
       return (
         <>
-          <h1>You don't have any Topics </h1>
+          <Header as='h1'>You don't have any Topics </Header>
           <Link to="/topicsform">Add A Topic</Link>
         </>
       )
       default :
       return (
         <>
-          <h1>You Have Too Many Topics </h1>
+          <Header as='h1'>You Have Too Many Topics </Header>
           <Link to="/topics/edit">Manage Topics</Link>
         </>
       )
