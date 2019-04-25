@@ -63,7 +63,7 @@ class TopicView extends React.Component {
         <iframe title='myframe' src="http://free.timeanddate.com/clock/i6q14t74/n220/fs24/fc5900b3/tct/pct/tt1/tw0" frameborder="0" width="220" height="30" allowTransparency="true"></iframe>
         </Header>
         <Header as='h1' textAlign='center'>{ this.renderTopics() }</Header>
-        {/* <Image src={topic.image_image} centered size="tiny"></Image> */}
+        {/* <Image src={topic.topic_image} centered size="tiny"></Image> */}
 
 
       </div>

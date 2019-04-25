@@ -7,7 +7,7 @@ import {Link, withRouter} from 'react-router-dom'
 
 
 class TopicsForm extends React.Component {
-  // defaultValues = { title: "", topic_date: "", topic_image: "",  };
+  defaultValues = { title: "", topic_date: "", topic_image: "",  };
   state = { topics: [], };
 
   handleSubmit = (e) => {
@@ -17,7 +17,7 @@ class TopicsForm extends React.Component {
       .then( res => {
         this.props.history.push("/complete");
       })
-      // this.setState({ ...this.defaultValues, });
+      this.setState({ ...this.defaultValues, });
   }
 
   handleChange = (e) => {
@@ -47,13 +47,17 @@ class TopicsForm extends React.Component {
               required
           />
           <label style={{color: 'white'}}>Topic Image</label>
-          <Form.Input
-            type='file'
+          
+
+          <Form.Input 
+            required
+            autoFocus
+                      
+            placeholder="URL"
             name="topic_image"
-            placeholder="Topic Image"
             value={topic_image}
             onChange={this.handleChange}
-          />
+                  />
           <Form.Button color="cyan">Submit</Form.Button>
         </Form>
         <br/>
