@@ -45,7 +45,7 @@ class VideoView extends React.Component {
       return (
         <>
           <h1>You Have Too Many Videos </h1>
-          <Link to="/videoedit">Manage Topics</Link>
+          <Link to="/videoedit">Manage Videos</Link>
         </>
       )
   }
